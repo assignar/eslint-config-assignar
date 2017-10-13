@@ -128,10 +128,12 @@ module.exports = {
         'no-prototype-builtins': [
             'off'
         ],
+        'no-restricted-globals': [
+            "off"
+        ],
         'no-tabs': 'error',
         'no-unexpected-multiline': 'error',
         'no-unreachable': 'error',
-        'no-unrestricted-globals': 0,
         'no-unused-expressions': [
             'error',
             {
