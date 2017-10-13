@@ -1,175 +1,164 @@
 module.exports = {
-    "globals": { },
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true
+    'globals': { },
+    'env': {
+        'browser': true,
+        'commonjs': true,
+        'es6': true
     },
-    "extends": [
-        "airbnb-base",
-        "plugin:react/recommended"
+    'extends': [
+        'airbnb-base',
     ],
-    "parser": "typescript-eslint-parser",
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
+    'parser': 'typescript-eslint-parser',
+    'parserOptions': {
+        'ecmaVersion': 6,
+        'ecmaFeatures': {
+            'experimentalObjectRestSpread': true,
+            'jsx': true
         },
-        "sourceType": "module"
+        'sourceType': 'module'
     },
-    "plugins": [
-        "react"
-    ],
-    "settings": {
-        "import/resolver": {
-            "webpack": {
-                "config": "./tools/webpack.config.js"
-            }
-        },
-        "import/parsers": {
-            "typescript-eslint-parser": [
-                "ts",
-                "tsx"
+    'settings': {
+        'import/parsers': {
+            'typescript-eslint-parser': [
+                'ts',
+                'tsx'
             ]
         }
     },
-    "rules": {
+    'rules': {
         // typescript changes
-        "no-undef": "off",
-        "no-unused-vars": "off",
-        "space-infix-ops": "off",
-        "react/prop-types": "off",
-        "react/no-unescaped-entities": "off",
-        "import/extensions": ["error", "always", { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }],
-        "camelcase": "off",
+        'no-undef': 'off',
+        'no-unused-vars': 'off',
+        'space-infix-ops': 'off',
+        'import/extensions': ['error', 'always', { 'js': 'never', 'jsx': 'never', 'ts': 'never', 'tsx': 'never' }],
+        'camelcase': 'off',
 
         // default
-        "import/no-extraneous-dependencies": [
-            "error",
+        'import/no-extraneous-dependencies': [
+            'error',
             {
-                "devDependencies": true
+                'devDependencies': true
             }
         ],
 
-        "class-methods-use-this": [
-            "off"
+        'class-methods-use-this': [
+            'off'
         ],
-        "comma-dangle": [
-            "error",
+        'comma-dangle': [
+            'error',
             {
-                "arrays": "always-multiline",
-                "objects": "always-multiline",
-                "imports": "always-multiline",
-                "exports": "always-multiline",
-                "functions": "never"
+                'arrays': 'always-multiline',
+                'objects': 'always-multiline',
+                'imports': 'always-multiline',
+                'exports': 'always-multiline',
+                'functions': 'never'
             }
         ],
-        "complexity": [
-            "error",
+        'complexity': [
+            'error',
             6
         ],
-        "function-paren-newline": 0,
-        "indent": [
-            "error",
+        'function-paren-newline': 0,
+        'indent': [
+            'error',
             4,
             {
-                "SwitchCase": 1
+                'SwitchCase': 1
             }
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
+        'linebreak-style': [
+            'error',
+            'unix'
         ],
-        "max-depth": [
-            "error",
+        'max-depth': [
+            'error',
             4
         ],
-        "max-len": [
-            "warn",
+        'max-len': [
+            'warn',
             {
-                "code": 120,
-                "tabWidth": 4,
-                "ignoreComments": true,
-                "ignoreUrls": true
+                'code': 120,
+                'tabWidth': 4,
+                'ignoreComments': true,
+                'ignoreUrls': true
             }
         ],
-        "max-nested-callbacks": [
-            "error",
+        'max-nested-callbacks': [
+            'error',
             5
         ],
-        "newline-before-return": [
-            "error"
+        'newline-before-return': [
+            'error'
         ],
-        "no-console": [
-            "error",
+        'no-console': [
+            'error',
             {
-                "allow": [
-                    "info",
-                    "error",
-                    "warn",
-                    "time",
-                    "timeEnd"
+                'allow': [
+                    'info',
+                    'error',
+                    'warn',
+                    'time',
+                    'timeEnd'
                 ]
             }
         ],
-        "no-extra-semi": [
-            "error"
+        'no-extra-semi': [
+            'error'
         ],
-        "no-multi-spaces": [
-            "warn",
+        'no-multi-spaces': [
+            'warn',
             {
-                "exceptions": {
-                    "VariableDeclarator": true
+                'exceptions': {
+                    'VariableDeclarator': true
                 }
             }
         ],
-        "no-param-reassign": [
-            "warn",
+        'no-param-reassign': [
+            'warn',
             {
-                "props": false
+                'props': false
             }
         ],
-        "no-plusplus": [
-            "error",
+        'no-plusplus': [
+            'error',
             {
-                "allowForLoopAfterthoughts": true
+                'allowForLoopAfterthoughts': true
             }
         ],
-        "no-prototype-builtins": [
-            "off"
+        'no-prototype-builtins': [
+            'off'
         ],
-        "no-tabs": "error",
-        "no-unexpected-multiline": "error",
-        "no-unreachable": "error",
-        "no-unrestricted-globals": 0,
-        "no-unused-expressions": [
-            "error",
+        'no-tabs': 'error',
+        'no-unexpected-multiline': 'error',
+        'no-unreachable': 'error',
+        'no-unrestricted-globals': 0,
+        'no-unused-expressions': [
+            'error',
             {
-                "allowShortCircuit": true
+                'allowShortCircuit': true
             }
         ],
-        "quotes": [
-            "error",
-            "single"
+        'quotes': [
+            'error',
+            'single'
         ],
-        "semi": [
-            "error",
-            "never"
+        'semi': [
+            'error',
+            'never'
         ],
-        "semi-style": 0,
-        "spaced-comment": [
-            "warn",
-            "always",
+        'semi-style': 0,
+        'spaced-comment': [
+            'warn',
+            'always',
             {
-                "exceptions": [
-                    "*"
+                'exceptions': [
+                    '*'
                 ]
             }
         ],
-        "strict": [
-            "error",
-            "global"
+        'strict': [
+            'error',
+            'global'
         ]
     }
 }
