@@ -1,0 +1,15 @@
+{
+    "name": "eslint-config-assignar-base",
+    "version": "",
+    "peerDependencies": {
+        "eslint": "^4.19.0"
+    },
+    "dependencies": {
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-dependencies": "^2.4.0",
+        "eslint-plugin-import": "^2.9.0",
+        "eslint-plugin-jest": "^21.15.0",
+        "eslint-plugin-typescript": "^0.10.0",
+        "typescript-eslint-parser": "^14.0.0"
+    }
+}

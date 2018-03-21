@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-assignar",
+  "version": "0.0.1",
+  "description": "assignar's eslint config",
+  "main": "index.js",
+  "repository": "git@github.com:assignar/eslint-config-assignar.git",
+  "author": "Brad Zacher <brad.zacher@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-import-resolver-webpack": "^0.8.4",
+    "eslint-plugin-graphql": "^1.5.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-restricted-globals": "^0.1.1"
+  },
+  "peerDependencies": {
+    "babel-core": ">=6.0.0",
+    "babel-plugin-module-resolver": ">=2.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "graphql": ">=0.11.0",
+    "webpack": ">=1.11.0"
+  }
+}
