@@ -9,6 +9,7 @@
         "eslint-plugin-dependencies": "^2.4.0",
         "eslint-plugin-import": "^2.9.0",
         "eslint-plugin-jest": "^21.15.0",
+        "eslint-plugin-spellcheck": "^0.0.10",
         "eslint-plugin-typescript": "^0.10.0",
         "typescript-eslint-parser": "^14.0.0"
     }
