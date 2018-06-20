@@ -9,6 +9,7 @@
     "devDependencies": {
         "@types/node": "^10.3.4",
         "eslint": "^4.19.1",
+        "eslint-find-rules": "^3.2.3",
         "eslint-plugin-dependencies": "^2.4.0",
         "eslint-plugin-eslint-comments": "^2.0.2",
         "eslint-plugin-import": "^2.9.0",
@@ -19,6 +20,9 @@
         "typescript-eslint-parser": "^16.0.0"
     },
     "scripts": {
-        "lint": "tsc -p ./jsconfig.json && eslint --cache ./packages"
+        "lint": "tsc -p ./jsconfig.json && eslint --cache ./packages",
+        "show-unused-base": "eslint-find-rules ./packages/eslint-config-assignar-base/index.js --unused",
+        "show-unused-node": "eslint-find-rules ./packages/eslint-config-assignar-node/index.js --unused",
+        "show-unused-react": "eslint-find-rules ./packages/eslint-config-assignar-react/index.js --unused"
     }
 }
