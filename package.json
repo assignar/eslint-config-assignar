@@ -23,6 +23,7 @@
         "lint": "tsc -p ./jsconfig.json && eslint --cache ./packages",
         "show-unused-base": "eslint-find-rules ./packages/eslint-config-assignar-base/index.js --unused",
         "show-unused-node": "eslint-find-rules ./packages/eslint-config-assignar-node/index.js --unused",
-        "show-unused-react": "eslint-find-rules ./packages/eslint-config-assignar-react/index.js --unused"
+        "show-unused-react": "eslint-find-rules ./packages/eslint-config-assignar-react/index.js --unused",
+        "ci": "yarn lint && yarn show-unused-base && yarn show-unused-node && yarn-show-unused-react"
     }
 }
