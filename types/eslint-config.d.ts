@@ -2,7 +2,10 @@
 
 declare namespace Rules {
     type RuleString = 'off' | 'warn' | 'error'
-    type RuleType = RuleString | (RuleString | Record<string, any>)[]
+    interface RuleArray extends Array<any> {
+        0 : RuleString
+    }
+    type RuleType = RuleString | RuleArray
     export interface Eslint {
          'accessor-pairs' : RuleType
          'array-bracket-newline' : RuleType
@@ -253,12 +256,6 @@ declare namespace Rules {
          'wrap-regex' : RuleType
          'yield-star-spacing' : RuleType
          'yoda' : RuleType
-    }
-    export interface Dependencies {
-         'dependencies/case-sensitive' : RuleType
-         'dependencies/no-cycles' : RuleType
-         'dependencies/no-unresolved' : RuleType
-         'dependencies/require-json-ext' : RuleType
     }
     export interface EslintComments {
          'eslint-comments/disable-enable-pair' : RuleType

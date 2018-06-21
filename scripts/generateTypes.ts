@@ -25,7 +25,10 @@ const typesFile = [
     '',
     'declare namespace Rules {',
     `${indent}type RuleString = 'off' | 'warn' | 'error'`,
-    `${indent}type RuleType = RuleString | (RuleString | Record<string, any>)[]`,
+    `${indent}interface RuleArray extends Array<any> {`,
+    `${indent}${indent}0 : RuleString`,
+    `${indent}}`,
+    `${indent}type RuleType = RuleString | RuleArray`,
     ...Object.keys(rulesPerPlugin).map((k) => {
         const interfaceCamel = k.replace(/(\-\w)/g, m => m[1].toUpperCase())
         const interfacePascal = interfaceCamel[0].toUpperCase() + interfaceCamel.substr(1)
