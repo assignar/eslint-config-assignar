@@ -1,4 +1,3 @@
-import dependencies from './plugins/dependencies'
 import eslintBase from './plugins/eslint-base'
 import eslintComments from './plugins/eslint-comments'
 import jest from './plugins/jest'
@@ -11,34 +10,6 @@ module.exports = {
         commonjs: true,
         es6: true,
     },
-    plugins: [
-        'dependencies',
-        'eslint-comments',
-        'import',
-        'jest',
-        'typescript',
-    ],
-    parser: 'typescript-eslint-parser',
-    parserOptions: {
-        ecmaVersion: 2018,
-        ecmaFeatures: {
-            globalReturn: false,
-        },
-        sourceType: 'module',
-    },
-    settings: Object.assign({}, imprt.settings),
-
-    rules: Object.assign(
-        {},
-        // configs for each plugin
-        dependencies.rules,
-        eslintBase.rules,
-        eslintComments.rules,
-        jest.rules,
-        imprt.rules,
-        typescript.rules,
-    ),
-
     overrides: [
         {
             // disable certain rules for testing as testing is messy business
@@ -57,5 +28,30 @@ module.exports = {
                'strict': 'off',
             }
         }
-    ]
+    ],
+    plugins: [
+        eslintComments.name,
+        imprt.name,
+        jest.name,
+        typescript.name,
+    ].map(p => require.resolve(p)),
+    parser: 'typescript-eslint-parser',
+    parserOptions: {
+        ecmaVersion: 2018,
+        ecmaFeatures: {
+            globalReturn: false,
+        },
+        sourceType: 'module',
+    },
+    settings: Object.assign({}, imprt.settings),
+
+    rules: Object.assign(
+        {},
+        // configs for each plugin
+        eslintBase.rules,
+        eslintComments.rules,
+        jest.rules,
+        imprt.rules,
+        typescript.rules,
+    ),
 }

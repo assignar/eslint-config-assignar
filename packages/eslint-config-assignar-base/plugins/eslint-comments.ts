@@ -1,4 +1,5 @@
 export default {
+    name: 'eslint-comments',
     rules: {
         // require a eslint-enable comment for every eslint-disable comment
         // https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/disable-enable-pair.html

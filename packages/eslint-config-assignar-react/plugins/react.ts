@@ -1,4 +1,5 @@
 export default {
+    name: 'react',
     rules: {
         // Enforces consistent naming for boolean props
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming

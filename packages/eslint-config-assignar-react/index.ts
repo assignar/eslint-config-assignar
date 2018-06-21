@@ -9,8 +9,9 @@ export default {
         require.resolve('eslint-config-assignar-base'),
     ],
     plugins: [
-        'react',
-    ],
+        react.name,
+        imprt.name,
+    ].map(p => require.resolve(p)),
     parserOptions: {
         exmaFeatures: {
             jsx: true,
