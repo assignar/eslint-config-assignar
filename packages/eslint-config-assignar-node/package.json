@@ -4,9 +4,12 @@
     "license": "MIT",
     "repository": "https://github.com/assignar/eslint-config-assignar.git",
     "author": "Brad Zacher <brad.zacher@gmail.com>",
-    "main": "index.js",
+    "main": "./dist/index.js",
     "peerDependencies": {
         "eslint": "^4.19.0"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "devDependencies": {
+        "typescript": "^2.9.2"
+    }
 }

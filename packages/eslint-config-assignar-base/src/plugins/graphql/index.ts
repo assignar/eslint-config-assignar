@@ -1,7 +1,7 @@
-import personalSchema = require('./personal.json')
-import mutationSchema = require('./mutation.json')
-import standardSchema = require('./standard.json')
-import reportingSchema = require('./reporting.json')
+import personalSchema = require('../../../schemas/personal.json')
+import mutationSchema = require('../../../schemas/mutation.json')
+import standardSchema = require('../../../schemas/standard.json')
+import reportingSchema = require('../../../schemas/reporting.json')
 
 export default {
     rules: {

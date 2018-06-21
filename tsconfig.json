@@ -3,9 +3,11 @@
         "allowSyntheticDefaultImports": false,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
-        "noEmit": true,
+        "declaration": false,
         "moduleResolution": "node",
         "module": "commonjs",
+        "noEmit": true,
+        "noEmitOnError": true,
         "noImplicitAny": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
@@ -14,13 +16,13 @@
         "noUnusedParameters": true,
         "pretty": true,
         "resolveJsonModule": true,
+        "sourceMap": true,
         "strict": true,
         "target": "esnext"
     },
     "include": [
         "packages/**/*.ts",
-        "types/**/*",
-        "scripts/**/*"
+        "types/**/*"
     ],
     "exclude": [
         "node_modules"

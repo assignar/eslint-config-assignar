@@ -1,5 +1,6 @@
 **/*
-!./plugins/**/*
-!./index.js
+!./schemas/**/*.json
+!./dist/**/*.js
+!./dist/**/*.js.map
 !./package.json
 !./README.md
