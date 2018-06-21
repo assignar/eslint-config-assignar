@@ -13,7 +13,7 @@ const rules : Rules.Eslint = {
         {
             setWithoutGet: true,
             getWithoutSet: false,
-        }
+        },
     ],
 
     // This rule enforces line breaks after opening and before closing array brackets.
@@ -36,12 +36,7 @@ const rules : Rules.Eslint = {
 
     // This rule enforces line breaks between array elements.
     // https://eslint.org/docs/rules/array-element-newline
-    'array-element-newline': [
-        'error',
-        {
-            multiline: true,
-        },
-    ],
+    'array-element-newline': 'off',
 
     // This rule can enforce or disallow the use of braces around arrow function body.
     // https://eslint.org/docs/rules/arrow-body-style
@@ -54,6 +49,7 @@ const rules : Rules.Eslint = {
     // https://eslint.org/docs/rules/arrow-parens
     'arrow-parens': [
         'error',
+        'as-needed',
         {
             requireForBlockBody: true,
         },
@@ -101,7 +97,7 @@ const rules : Rules.Eslint = {
     // Otherwise, a warning will be thrown. This rule only flags definitions and assignments but not function calls.
     // In case of ES6 import statements, this rule only targets the name of the variable that will be imported into the local module scope.
     // https://eslint.org/docs/rules/camelcase
-    'camelcase': [
+    camelcase: [
         'error',
         {
             properties: 'never',
@@ -121,12 +117,12 @@ const rules : Rules.Eslint = {
     'comma-dangle': [
         'error',
         {
-            'arrays': 'always-multiline',
-            'objects': 'always-multiline',
-            'imports': 'always-multiline',
-            'exports': 'always-multiline',
-            'functions': 'always-multiline',
-        }
+            arrays: 'always-multiline',
+            objects: 'always-multiline',
+            imports: 'always-multiline',
+            exports: 'always-multiline',
+            functions: 'always-multiline',
+        },
     ],
 
     // This rule enforces consistent spacing before and after commas in variable declarations,
@@ -164,9 +160,9 @@ const rules : Rules.Eslint = {
 
     // This rule is aimed at reducing code complexity by capping the amount of cyclomatic complexity allowed in a program.
     // https://eslint.org/docs/rules/complexity
-    'complexity': [
+    complexity: [
         'error',
-        12
+        12,
     ],
 
     // This rule enforces consistent spacing inside computed property brackets.
@@ -200,7 +196,7 @@ const rules : Rules.Eslint = {
 
     // This rule is aimed at preventing bugs and increasing code clarity by ensuring that block statements are wrapped in curly braces.
     // https://eslint.org/docs/rules/curly
-    'curly': [
+    curly: [
         'error',
         'all',
     ],
@@ -239,7 +235,7 @@ const rules : Rules.Eslint = {
 
     // require the use of === and !==
     // https://eslint.org/docs/rules/eqeqeq
-    'eqeqeq': [
+    eqeqeq: [
         'error',
         'always',
         {
@@ -341,7 +337,7 @@ const rules : Rules.Eslint = {
 
     // This rule enforces a consistent indentation style.
     // https://eslint.org/docs/rules/indent
-    'indent': [
+    indent: [
         'error',
         4,
         {
@@ -463,11 +459,11 @@ const rules : Rules.Eslint = {
     'max-len': [
         'warn',
         {
-            'code': 120,
-            'tabWidth': 4,
-            'ignoreComments': true,
-            'ignoreUrls': true
-        }
+            code: 120,
+            tabWidth: 4,
+            ignoreComments: true,
+            ignoreUrls: true,
+        },
     ],
 
     // This rule enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity.
@@ -594,15 +590,15 @@ const rules : Rules.Eslint = {
     'no-console': [
         'error',
         {
-            'allow': [
+            allow: [
                 'info',
                 'error',
                 'warn',
                 'time',
                 'timeEnd',
-                'trace'
-            ]
-        }
+                'trace',
+            ],
+        },
     ],
 
     // This rule is aimed to flag modifying variables that are declared using const keyword.
@@ -679,7 +675,7 @@ const rules : Rules.Eslint = {
                 'arrowFunctions',
                 'functions',
                 'methods',
-            ]
+            ],
         },
     ],
 
@@ -826,10 +822,10 @@ const rules : Rules.Eslint = {
                 ['&', '|', '^', '~', '<<', '>>', '>>>'],
                 ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
                 ['&&', '||'],
-                ['in', 'instanceof']
+                ['in', 'instanceof'],
             ],
-            allowSamePrecedence: false
-        }
+            allowSamePrecedence: false,
+        },
     ],
 
     // disallow require calls to be mixed with regular variable declarations
@@ -849,10 +845,10 @@ const rules : Rules.Eslint = {
     'no-multi-spaces': [
         'warn',
         {
-            'exceptions': {
-                'VariableDeclarator': true
-            }
-        }
+            exceptions: {
+                VariableDeclarator: true,
+            },
+        },
     ],
 
     // This rule is aimed at preventing the use of multiline strings
@@ -926,7 +922,7 @@ const rules : Rules.Eslint = {
     'no-plusplus': [
         'error',
         {
-            'allowForLoopAfterthoughts': false,
+            allowForLoopAfterthoughts: false,
         },
     ],
 
@@ -1029,6 +1025,7 @@ const rules : Rules.Eslint = {
     // https://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': [
         'error',
+        /* eslint-disable max-len */
         {
             selector: 'ForInStatement',
             message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
@@ -1045,6 +1042,7 @@ const rules : Rules.Eslint = {
             selector: 'WithStatement',
             message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
         },
+        /* eslint-enable max-len */
     ],
 
     // This rule aims to eliminate assignments from return statements
@@ -1123,7 +1121,8 @@ const rules : Rules.Eslint = {
 
     // Disallow Undeclared Variables
     // https://eslint.org/docs/rules/no-undef
-    'no-undef': 'error',
+    // off because typescript will catch this for us
+    'no-undef': 'off',
 
     // Disallow Initializing to undefined
     // https://eslint.org/docs/rules/no-undef-init
@@ -1248,7 +1247,7 @@ const rules : Rules.Eslint = {
     'no-useless-return': 'error',
 
     // This rule is aimed at discouraging the use of var and encouraging the use of const or let instead
-    //https://eslint.org/docs/rules/no-var
+    // https://eslint.org/docs/rules/no-var
     'no-var': 'error',
 
     // This rule aims to eliminate use of void operator
@@ -1283,7 +1282,7 @@ const rules : Rules.Eslint = {
     'object-curly-newline': [
         'error',
         {
-            'consistent': true
+            consistent: true,
         },
     ],
 
@@ -1391,15 +1390,15 @@ const rules : Rules.Eslint = {
     'prefer-destructuring': [
         'off',
         {
-            'VariableDeclarator': {
+            VariableDeclarator: {
                 object: false,
                 array: false,
             },
-            'AssignmentExpression': {
+            AssignmentExpression: {
                 object: false,
                 array: false,
-            }
-        }
+            },
+        },
     ],
 
     // This rule disallows calls to parseInt() or Number.parseInt() if called with two arguments:
@@ -1442,15 +1441,15 @@ const rules : Rules.Eslint = {
 
     // This rule enforces the consistent use of either backticks, double, or single quotes.
     // https://eslint.org/docs/rules/quotes
-    'quotes': [
+    quotes: [
         'error',
-        'single'
+        'single',
     ],
 
     // This rule is aimed at preventing the unintended conversion of a string to a number of a different base
     // than intended or at preventing the redundant 10 radix if targeting modern environments only.
     // https://eslint.org/docs/rules/radix
-    'radix': 'error',
+    radix: 'error',
 
     // This rule warns async functions which have no await expression
     // https://eslint.org/docs/rules/require-await
@@ -1473,9 +1472,9 @@ const rules : Rules.Eslint = {
 
     // This rule enforces consistent use of semicolons.
     // https://eslint.org/docs/rules/semi
-    'semi': [
+    semi: [
         'error',
-        'never'
+        'never',
     ],
 
     // This rule aims to enforce spacing around a semicolon.
@@ -1552,18 +1551,18 @@ const rules : Rules.Eslint = {
         'warn',
         'always',
         {
-            'exceptions': [
+            exceptions: [
                 '*',
-                '/'
-            ]
-        }
+                '/',
+            ],
+        },
     ],
 
     // This rule requires or disallows strict mode directives
     // https://eslint.org/docs/rules/strict
-    'strict': [
+    strict: [
         'error',
-        'global'
+        'global',
     ],
 
     // This rule controls spacing around colons of case and default clauses in switch statements
@@ -1642,7 +1641,7 @@ const rules : Rules.Eslint = {
 
     // This rule aims to enforce consistent style of conditions which compare a variable to a literal value.
     // https://eslint.org/docs/rules/yoda
-    'yoda': 'error',
+    yoda: 'error',
 }
 
 export default {

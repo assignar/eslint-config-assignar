@@ -18,7 +18,7 @@
         "resolveJsonModule": true,
         "sourceMap": true,
         "strict": true,
-        "target": "esnext"
+        "target": "es6"
     },
     "include": [
         "packages/**/*.ts",

@@ -15,7 +15,7 @@ const rules : Rules.Jest = {
         'error',
         {
             ignore: ['describe'],
-        }
+        },
     ],
 
     // This rule raises a warning about 'skip' tests.

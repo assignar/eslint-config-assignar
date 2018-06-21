@@ -11,7 +11,7 @@ const rules : Rules.React = {
             button: true,
             submit: true,
             reset: false,
-        }
+        },
     ],
 
     // Enforce all defaultProps have a corresponding non-required PropType
@@ -399,7 +399,7 @@ const rules : Rules.React = {
         {
             customValidators: [],
             skipShapeProps: true,
-        }
+        },
     ],
 
     // Prevent unused state values
@@ -433,7 +433,7 @@ const rules : Rules.React = {
         {
             ignore: [],
             customValidators: [],
-            skipUndeclared: false
+            skipUndeclared: false,
         },
     ],
 
@@ -508,7 +508,7 @@ const rules : Rules.React = {
                 ],
                 rendering: [
                     '/^render.+$/',
-                    'render'
+                    'render',
                 ],
             },
         },

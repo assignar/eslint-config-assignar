@@ -1,17 +1,17 @@
 import react from './plugins/react'
 import imprt from './plugins/import'
 
-export default {
+module.exports = {
     env: {
         browser: true,
     },
     extends: [
-        require.resolve('eslint-config-assignar-base'),
+        'assignar-base',
     ],
     plugins: [
         react.name,
         imprt.name,
-    ].map(p => require.resolve(p)),
+    ],
     parserOptions: {
         exmaFeatures: {
             jsx: true,

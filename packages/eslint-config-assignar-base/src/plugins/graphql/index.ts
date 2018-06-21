@@ -1,8 +1,8 @@
 // TODO - figure out how to make these independent of this repo...
-import personalSchema = require('../../schemas/personal.json')
-import mutationSchema = require('../../schemas/mutation.json')
-import standardSchema = require('../../schemas/standard.json')
-import reportingSchema = require('../../schemas/reporting.json')
+import personalSchema = require('./schemas/personal.json')
+import mutationSchema = require('./schemas/mutation.json')
+import standardSchema = require('./schemas/standard.json')
+import reportingSchema = require('./schemas/reporting.json')
 
 export default {
     rules: {

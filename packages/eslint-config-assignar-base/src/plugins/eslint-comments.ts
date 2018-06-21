@@ -5,7 +5,7 @@ const rules : Rules.EslintComments = {
         'error',
         {
             allowWholeFile: true,
-        }
+        },
     ],
 
     // disallow a eslint-enable comment for multiple eslint-disable comments
@@ -38,6 +38,7 @@ const rules : Rules.EslintComments = {
         'error',
         {
             allow: [
+                'eslint-enable',
                 'eslint-disable',
                 'eslint-disable-line',
                 'eslint-disable-next-line',

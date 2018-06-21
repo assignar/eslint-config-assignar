@@ -15,10 +15,20 @@ show-unused:
 
 .PHONY: ci
 ci:
-	@make lint
+	@yarn lerna bootstrap
+# build first because the lint is based off this package!
 	@make build
+# make sure there are no lint errors
+	@make lint
+# make sure there are no unused rules in any package
 	@make show-unused
 
 .PHONY: regenerate-types
 regenerate-types:
 	@yarn ts-node ./scripts/generateTypes.ts
+
+
+.PHONY: publish
+publish:
+	# todo - integrate this into assignar-cli
+	@yarn lerna publish --skip-git --skip-npm --preid=rc

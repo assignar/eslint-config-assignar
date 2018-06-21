@@ -13,7 +13,7 @@ module.exports = {
     overrides: [
         {
             // disable certain rules for testing as testing is messy business
-            'files': [
+            files: [
                 'src/**/*.spec.ts',
                 'src/**/*.spec.tsx',
                 'src/**/*.test.ts',
@@ -22,19 +22,16 @@ module.exports = {
                 'test/**/*',
                 'types/**/*',
             ],
-            'rules': {
-               'typescript/no-explicit-any': 'off',
-               'max-len': 'off',
-               'strict': 'off',
-            }
-        }
+            rules: {
+                'typescript/no-explicit-any': 'off',
+                'max-len': 'off',
+                strict: 'off',
+            },
+        },
     ],
     plugins: [
-        eslintComments.name,
-        imprt.name,
-        jest.name,
-        typescript.name,
-    ].map(p => require.resolve(p)),
+        eslintComments.name, imprt.name, jest.name, typescript.name,
+    ],
     parser: 'typescript-eslint-parser',
     parserOptions: {
         ecmaVersion: 2018,
@@ -43,14 +40,16 @@ module.exports = {
         },
         sourceType: 'module',
     },
-    settings: Object.assign({}, imprt.settings),
-
     rules: {
-        // configs for each plugin
+        // rules for each plugin
         ...eslintBase.rules,
         ...eslintComments.rules,
         ...jest.rules,
         ...imprt.rules,
         ...typescript.rules,
+    },
+    settings: {
+        // settings for each plugin
+        ...imprt.settings,
     },
 }

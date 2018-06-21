@@ -1,6 +1,8 @@
+/* eslint-disable strict */// remove this when (if) we import something
+
 module.exports = {
     extends: [
-        require.resolve('eslint-config-assignar-base'),
+        'assignar-base',
     ],
     env: {
         node: true,
