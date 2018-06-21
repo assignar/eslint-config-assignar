@@ -1,7 +1,7 @@
-const imprt = require('./plugins/import')
-const react = require('./plugins/react')
+import react from './plugins/react'
+import imprt from './plugins/import'
 
-module.exports = {
+export default {
     env: {
         browser: true,
     },

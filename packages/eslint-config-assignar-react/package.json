@@ -8,5 +8,7 @@
     "peerDependencies": {
         "eslint": "^4.19.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "eslint-plugin-react": "^7.9.1"
+    }
 }

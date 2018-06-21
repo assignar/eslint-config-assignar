@@ -12,10 +12,14 @@
         "eslint-find-rules": "^3.2.3",
         "eslint-plugin-dependencies": "^2.4.0",
         "eslint-plugin-eslint-comments": "^2.0.2",
+        "eslint-plugin-graphql": "^2.1.1",
         "eslint-plugin-import": "^2.9.0",
         "eslint-plugin-jest": "^21.15.0",
+        "eslint-plugin-react": "^7.9.1",
         "eslint-plugin-typescript": "^0.12.0",
         "eslint-restricted-globals": "^0.1.1",
+        "graphql": "^0.13.2",
+        "ts-node": "^6.1.2",
         "typescript": "^2.9.2",
         "typescript-eslint-parser": "^16.0.0"
     },
@@ -24,6 +28,7 @@
         "show-unused-base": "eslint-find-rules ./packages/eslint-config-assignar-base/index.js --unused",
         "show-unused-node": "eslint-find-rules ./packages/eslint-config-assignar-node/index.js --unused",
         "show-unused-react": "eslint-find-rules ./packages/eslint-config-assignar-react/index.js --unused",
-        "ci": "yarn lint && yarn show-unused-base && yarn show-unused-node && yarn-show-unused-react"
+        "ci": "yarn lint && yarn show-unused-base && yarn show-unused-node && yarn-show-unused-react",
+        "regenerate-types": "ts-node ./scripts/generateTypes.ts"
     }
 }

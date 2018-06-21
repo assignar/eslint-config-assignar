@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     rules: {
         // Grouping overloaded members together can improve readability of the code.
         // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/adjacent-overload-signatures.md
@@ -109,5 +109,5 @@ module.exports = {
                 after: true,
             },
         ],
-    },
+    } as Rules.Typescript,
 }

@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        "dependencies",
+        "eslint-comments",
+        "import",
+        "graphql",
+        "jest",
+        "react",
+        "typescript"
+    ]
+}

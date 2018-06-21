@@ -3,9 +3,9 @@
         "allowSyntheticDefaultImports": false,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
-        "checkJs": true,
         "noEmit": true,
         "moduleResolution": "node",
+        "module": "commonjs",
         "noImplicitAny": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
@@ -18,7 +18,9 @@
         "target": "esnext"
     },
     "include": [
-        "packages/**/*.js"
+        "packages/**/*.ts",
+        "types/**/*",
+        "scripts/**/*"
     ],
     "exclude": [
         "node_modules"

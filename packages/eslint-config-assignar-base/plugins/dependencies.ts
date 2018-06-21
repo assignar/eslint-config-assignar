@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     rules: {
         // Verifies that require("…"), require.resolve(…), import "…" and export … from "…" ids match the case that is reported by a directory listing.
         'dependencies/case-sensitive': 'off',
@@ -11,5 +11,5 @@ module.exports = {
 
         // Ensures that modules are that are .json include their extension in the module id
         'dependencies/require-json-ext': 'off',
-    },
+    } as Rules.Dependencies,
 }

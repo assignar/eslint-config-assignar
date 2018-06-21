@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     rules: {
         // This rule gives you control over the usage of test/it keywords in your codebase
         // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/consistent-test-it
@@ -74,5 +74,5 @@ module.exports = {
         // Enforce having return statement when testing with promises
         // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-expect-in-promise
         'jest/valid-expect-in-promise': 'error',
-    },
+    } as Rules.Jest,
 }

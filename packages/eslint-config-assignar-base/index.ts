@@ -1,8 +1,9 @@
-const dependencies = require('./plugins/dependencies')
-const eslintBase = require('./plugins/eslint-base')
-const jest = require('./plugins/jest')
-const imprt = require('./plugins/import')
-const typescript = require('./plugins/typescript')
+import dependencies from './plugins/dependencies'
+import eslintBase from './plugins/eslint-base'
+import eslintComments from './plugins/eslint-comments'
+import jest from './plugins/jest'
+import imprt from './plugins/import'
+import typescript from './plugins/typescript'
 
 module.exports = {
     globals: {},
@@ -12,6 +13,7 @@ module.exports = {
     },
     plugins: [
         'dependencies',
+        'eslint-comments',
         'import',
         'jest',
         'typescript',
@@ -31,6 +33,7 @@ module.exports = {
         // configs for each plugin
         dependencies.rules,
         eslintBase.rules,
+        eslintComments.rules,
         jest.rules,
         imprt.rules,
         typescript.rules,

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     rules: {
         // Enforces consistent naming for boolean props
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming
@@ -534,5 +534,5 @@ module.exports = {
         // Prevent void DOM elements from receiving children
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
         'react/void-dom-elements-no-children': 'error',
-    },
+    } as Rules.React,
 }

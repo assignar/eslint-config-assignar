@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     rules: {
         // ensure default import coupled with default export
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
@@ -182,7 +182,7 @@ module.exports = {
         // this should not be enabled until this proposal has at least been *presented* to TC39.
         // At the moment, it's not a thing.
         'import/unambiguous': 'off',
-    },
+    } as Rules.Import,
     settings: {
         'import/extensions': [
             'js',
