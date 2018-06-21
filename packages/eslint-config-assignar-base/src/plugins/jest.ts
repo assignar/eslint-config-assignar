@@ -34,6 +34,10 @@ const rules : Rules.Jest = {
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-identical-title
     'jest/no-identical-title': 'error',
 
+    // Disallow Jasmine globals
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-jasmine-globals.md
+    'jest/no-jasmine-globals': 'error',
+
     // Disallow importing Jest
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-jest-import
     'jest/no-jest-import': 'error',

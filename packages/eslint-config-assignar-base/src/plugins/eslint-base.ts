@@ -959,7 +959,8 @@ const rules : Rules.Eslint = {
     'no-restricted-globals': [
         'error',
         'isFinite',
-    ].concat(restrictedGlobals),
+        ...restrictedGlobals,
+    ] as Rules.RuleType,
 
     // This rule allows you to specify imports that you don’t want to use in your application
     // https://eslint.org/docs/rules/no-restricted-imports
@@ -1349,92 +1350,299 @@ const rules : Rules.Eslint = {
         },
     ],
 
+    // This rule enforces consistent empty line padding within blocks
     // https://eslint.org/docs/rules/padded-blocks
-    'padded-blocks': ,
+    'padded-blocks': [
+        'error',
+        {
+            blocks: 'never',
+            classes: 'never',
+            switches: 'never',
+        },
+    ],
+
+    // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements
-    'padding-line-between-statements': ,
+    'padding-line-between-statements': 'off',
+
+    // Require using arrow functions for callbacks
     // https://eslint.org/docs/rules/prefer-arrow-callback
-    'prefer-arrow-callback': ,
+    'prefer-arrow-callback': [
+        'error',
+        {
+            allowNamedFunctions: false,
+            allowUnboundThis: true,
+        },
+    ],
+
+    // This rule is aimed at flagging variables that are declared using let keyword,
+    // but never reassigned after the initial assignment
     // https://eslint.org/docs/rules/prefer-const
-    'prefer-const': ,
+    'prefer-const': [
+        'error',
+        {
+            destructuring: 'any',
+            ignoreReadBeforeAssign: true,
+        },
+    ],
+
+    // Prefer destructuring from arrays and objects
     // https://eslint.org/docs/rules/prefer-destructuring
-    'prefer-destructuring': ,
+    'prefer-destructuring': [
+        'off',
+        {
+            'VariableDeclarator': {
+                object: false,
+                array: false,
+            },
+            'AssignmentExpression': {
+                object: false,
+                array: false,
+            }
+        }
+    ],
+
+    // This rule disallows calls to parseInt() or Number.parseInt() if called with two arguments:
+    // a string; and a radix option of 2 (binary), 8 (octal), or 16 (hexadecimal).
     // https://eslint.org/docs/rules/prefer-numeric-literals
-    'prefer-numeric-literals': ,
+    'prefer-numeric-literals': 'error',
+
+    // require using Error objects as Promise rejection reasons
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
-    'prefer-promise-reject-errors': ,
+    'prefer-promise-reject-errors': [
+        'error',
+        {
+            allowEmptyReject: true,
+        },
+    ],
+
+    // use rest parameters instead of arguments
     // https://eslint.org/docs/rules/prefer-rest-params
-    'prefer-rest-params': ,
+    'prefer-rest-params': 'error',
+
+    // suggest using the spread operator instead of .apply()
     // https://eslint.org/docs/rules/prefer-spread
-    'prefer-spread': ,
+    'prefer-spread': 'error',
+
+    // suggest using template literals instead of string concatenation
     // https://eslint.org/docs/rules/prefer-template
-    'prefer-template': ,
+    'prefer-template': 'error',
+
+    // require quotes around object literal property names
     // https://eslint.org/docs/rules/quote-props
-    'quote-props': ,
+    'quote-props': [
+        'error',
+        'as-needed',
+        {
+            keywords: false,
+            unnecessary: true,
+            numbers: false,
+        },
+    ],
+
+    // This rule enforces the consistent use of either backticks, double, or single quotes.
     // https://eslint.org/docs/rules/quotes
-    'quotes': ,
+    'quotes': [
+        'error',
+        'single'
+    ],
+
+    // This rule is aimed at preventing the unintended conversion of a string to a number of a different base
+    // than intended or at preventing the redundant 10 radix if targeting modern environments only.
     // https://eslint.org/docs/rules/radix
-    'radix': ,
+    'radix': 'error',
+
+    // This rule warns async functions which have no await expression
     // https://eslint.org/docs/rules/require-await
-    'require-await': ,
+    'require-await': 'error',
+
+    // This rule requires JSDoc comments for specified nodes
     // https://eslint.org/docs/rules/require-jsdoc
-    'require-jsdoc': ,
+    'require-jsdoc': 'off',
+
+    // This rule generates warnings for generator functions that do not have the yield keyword.
     // https://eslint.org/docs/rules/require-yield
-    'require-yield': ,
+    'require-yield': 'error',
+
+    // This rule aims to enforce consistent spacing between rest and spread operators and their expressions.
     // https://eslint.org/docs/rules/rest-spread-spacing
-    'rest-spread-spacing': ,
-    //https://eslint.org/docs/rules/semi
-    'semi': ,
+    'rest-spread-spacing': [
+        'error',
+        'never',
+    ],
+
+    // This rule enforces consistent use of semicolons.
+    // https://eslint.org/docs/rules/semi
+    'semi': [
+        'error',
+        'never'
+    ],
+
+    // This rule aims to enforce spacing around a semicolon.
     // https://eslint.org/docs/rules/semi-spacing
-    'semi-spacing': ,
+    'semi-spacing': [
+        'error',
+        {
+            before: false,
+            after: true,
+        },
+    ],
+
+    // This rule reports line terminators around semicolons
     // https://eslint.org/docs/rules/semi-style
-    'semi-style': ,
+    'semi-style': [
+        'error',
+        // the only time we use semis is for new lines with parentheses, so that's where we want the semi.
+        'first',
+    ],
+
+    // This rule checks all import declarations and verifies that all imports are first sorted by the used member
+    // syntax and then alphabetically by the first member or alias name.
     // https://eslint.org/docs/rules/sort-imports
-    'sort-imports': ,
+    'sort-imports': 'off',
+
+    // This rule checks all property definitions of object expressions and verifies that all variables are sorted alphabetically
     // https://eslint.org/docs/rules/sort-keys
-    'sort-keys': ,
+    'sort-keys': 'off', // TODO - do we want this?
+
+    // This rule checks all variable declaration blocks and verifies that all variables are sorted alphabetically
     // https://eslint.org/docs/rules/sort-vars
-    'sort-vars': ,
+    'sort-vars': 'off',
+
+    // This rule will enforce consistency of spacing before blocks
     // https://eslint.org/docs/rules/space-before-blocks
-    'space-before-blocks': ,
+    'space-before-blocks': 'error',
+
+    // This rule aims to enforce consistent spacing before function parentheses.
     // https://eslint.org/docs/rules/space-before-function-paren
-    'space-before-function-paren': ,
+    'space-before-function-paren': [
+        'error',
+        {
+            anonymous: 'always',
+            named: 'never',
+            asyncArrow: 'always',
+        },
+    ],
+
+    // This rule will enforce consistency of spacing directly inside of parentheses.
     // https://eslint.org/docs/rules/space-in-parens
-    'space-in-parens': ,
+    'space-in-parens': [
+        'error',
+        'never',
+    ],
+
+    // require spaces around operators
     // https://eslint.org/docs/rules/space-infix-ops
-    'space-infix-ops': ,
+    'space-infix-ops': 'error',
+
+    // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops
-    'space-unary-ops': ,
+    'space-unary-ops': [
+        'error',
+        {
+            words: true,
+            nonwords: false,
+            overrides: {},
+        },
+    ],
+
+    // require or disallow a space immediately following the // or /* in a comment
     // https://eslint.org/docs/rules/spaced-comment
-    'spaced-comment': ,
+    'spaced-comment': [
+        'warn',
+        'always',
+        {
+            'exceptions': [
+                '*',
+                '/'
+            ]
+        }
+    ],
+
+    // This rule requires or disallows strict mode directives
     // https://eslint.org/docs/rules/strict
-    'strict': ,
+    'strict': [
+        'error',
+        'global'
+    ],
+
+    // This rule controls spacing around colons of case and default clauses in switch statements
     // https://eslint.org/docs/rules/switch-colon-spacing
-    'switch-colon-spacing': ,
+    'switch-colon-spacing': [
+        'error',
+        {
+            after: true,
+            before: false,
+        },
+    ],
+
+    // This rules requires a description when creating symbols
     // https://eslint.org/docs/rules/symbol-description
-    'symbol-description': ,
+    'symbol-description': 'error',
+
+    // enforce usage of spacing in template strings
     // https://eslint.org/docs/rules/template-curly-spacing
-    'template-curly-spacing': ,
+    'template-curly-spacing': 'error',
+
+    // Require or disallow spacing between template tags and their literals
     // https://eslint.org/docs/rules/template-tag-spacing
-    'template-tag-spacing': ,
+    'template-tag-spacing': [
+        'error',
+        'never',
+    ],
+
+    // Require or disallow the Unicode Byte Order Mark (BOM)
     // https://eslint.org/docs/rules/unicode-bom
-    'unicode-bom': ,
+    'unicode-bom': [
+        'error',
+        'never',
+    ],
+
+    // require calls to isNaN() when checking for NaN
     // https://eslint.org/docs/rules/use-isnan
-    'use-isnan': ,
+    'use-isnan': 'error',
+
+    // This rule enforces valid and consistent JSDoc comments
     // https://eslint.org/docs/rules/valid-jsdoc
-    'valid-jsdoc': ,
+    'valid-jsdoc': 'off',
+
+    // This rule enforces comparing typeof expressions to valid string literals
     // https://eslint.org/docs/rules/valid-typeof
-    'valid-typeof': ,
+    'valid-typeof': [
+        'error',
+        {
+            requireStringLiterals: true,
+        },
+    ],
+
+    // Require Variable Declarations to be at the top of their scope
     // https://eslint.org/docs/rules/vars-on-top
-    'vars-on-top': ,
-    // https://eslint.org/docs/rules/wrap-iife
-    'wrap-iife': ,
+    'vars-on-top': 'error',
+
+    // require immediate function invocation to be wrapped in parentheses
+    // https://eslint.org/docs/rules/wrap-iife.html
+    'wrap-iife': [
+        'error',
+        'outside',
+        {
+            functionPrototypeMethods: false,
+        },
+    ],
+
+    // Require Regex Literals to be Wrapped
     // https://eslint.org/docs/rules/wrap-regex
-    'wrap-regex': ,
+    'wrap-regex': 'off',
+
+    // This rule enforces spacing around the * in yield* expressions
     // https://eslint.org/docs/rules/yield-star-spacing
-    'yield-star-spacing': ,
+    'yield-star-spacing': [
+        'error',
+        'after',
+    ],
+
+    // This rule aims to enforce consistent style of conditions which compare a variable to a literal value.
     // https://eslint.org/docs/rules/yoda
-    'yoda': ,
+    'yoda': 'error',
 }
 
 export default {

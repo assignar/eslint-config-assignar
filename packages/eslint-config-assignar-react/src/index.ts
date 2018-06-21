@@ -17,9 +17,8 @@ export default {
             jsx: true,
         },
     },
-    rules: Object.assign(
-        {},
-        imprt.rules,
-        react.rules,
-    ),
+    rules: {
+        ...imprt.rules,
+        ...react.rules,
+    },
 }

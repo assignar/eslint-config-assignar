@@ -11,3 +11,6 @@ yarn-error.log
 
 # es-lint
 .eslintcache
+
+# build folders
+dist

@@ -5,7 +5,7 @@ declare namespace Rules {
     interface RuleArray extends Array<any> {
         0 : RuleString
     }
-    type RuleType = RuleString | RuleArray
+    export type RuleType = RuleString | RuleArray
     export interface Eslint {
          'accessor-pairs' : RuleType
          'array-bracket-newline' : RuleType

@@ -28,7 +28,7 @@ const typesFile = [
     `${indent}interface RuleArray extends Array<any> {`,
     `${indent}${indent}0 : RuleString`,
     `${indent}}`,
-    `${indent}type RuleType = RuleString | RuleArray`,
+    `${indent}export type RuleType = RuleString | RuleArray`,
     ...Object.keys(rulesPerPlugin).map((k) => {
         const interfaceCamel = k.replace(/(\-\w)/g, m => m[1].toUpperCase())
         const interfacePascal = interfaceCamel[0].toUpperCase() + interfaceCamel.substr(1)

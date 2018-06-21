@@ -45,13 +45,12 @@ module.exports = {
     },
     settings: Object.assign({}, imprt.settings),
 
-    rules: Object.assign(
-        {},
+    rules: {
         // configs for each plugin
-        eslintBase.rules,
-        eslintComments.rules,
-        jest.rules,
-        imprt.rules,
-        typescript.rules,
-    ),
+        ...eslintBase.rules,
+        ...eslintComments.rules,
+        ...jest.rules,
+        ...imprt.rules,
+        ...typescript.rules,
+    },
 }

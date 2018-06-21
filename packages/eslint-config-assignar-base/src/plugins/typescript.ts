@@ -59,6 +59,10 @@ const rules : Rules.Typescript = {
     // this is on to discourage it - it can be specifically disabled in code if there's a valid use case
     'typescript/no-explicit-any': 'error',
 
+    // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
+    // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-inferrable-types.md
+    'typescript/no-inferrable-types': 'off',
+
     // This rule aims to standardise the way modules are declared
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-namespace.md
     'typescript/no-namespace': [
@@ -94,6 +98,10 @@ const rules : Rules.Typescript = {
     // Disallow the use of variables before they are defined
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-use-before-define.md
     'typescript/no-use-before-define': 'error',
+
+    // Disallows the use of require statements except in import statements
+    // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-var-requires.md
+    'typescript/no-var-requires': 'off', // TODO - enable this, maybe?
 
     // Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/prefer-namespace-keyword.md
