@@ -1,17 +1,17 @@
-import personalSchema = require('../../../schemas/personal.json')
-import mutationSchema = require('../../../schemas/mutation.json')
-import standardSchema = require('../../../schemas/standard.json')
-import reportingSchema = require('../../../schemas/reporting.json')
+// TODO - figure out how to make these independent of this repo...
+import personalSchema = require('../../schemas/personal.json')
+import mutationSchema = require('../../schemas/mutation.json')
+import standardSchema = require('../../schemas/standard.json')
+import reportingSchema = require('../../schemas/reporting.json')
 
 export default {
     rules: {
         'graphql/template-strings': [
             'error',
             // add config for each endpoint we touch
-            // TODO - figure out how to make these independent of this repo...
             {
                 env: 'apollo',
-                tagName: 'gql',
+                tagName: 'gqlPersonal',
                 schemaJson: personalSchema,
             },
             {

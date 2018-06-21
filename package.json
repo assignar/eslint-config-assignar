@@ -25,14 +25,11 @@
         "typescript-eslint-parser": "^16.0.0"
     },
     "scripts": {
-        "build": "yarn tsc -p ./packages/eslint-config-assignar-base/tsconfig.json && yarn tsc -p ./packages/eslint-config-assignar-node/tsconfig.json && yarn tsc -p ./packages/eslint-config-assignar-react/tsconfig.json",
-        "clean": "rimraf -g ./packages/*/dist/",
         "typecheck": "tsc -p ./tsconfig.json --noEmit",
+        "build": "make build",
+        "clean": "rimraf -g ./packages/*/dist/",
         "lint": "eslint --cache ./packages",
-        "show-unused-base": "eslint-find-rules ./packages/eslint-config-assignar-base/dist/index.js --unused",
-        "show-unused-node": "eslint-find-rules ./packages/eslint-config-assignar-node/dist/index.js --unused",
-        "show-unused-react": "eslint-find-rules ./packages/eslint-config-assignar-react/dist/index.js --unused",
-        "ci": "yarn lint && yarn typecheck && yarn show-unused-base && yarn show-unused-node && yarn-show-unused-react",
+        "ci": "make ci",
         "regenerate-types": "ts-node ./scripts/generateTypes.ts"
     }
 }
