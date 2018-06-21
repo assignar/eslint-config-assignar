@@ -244,6 +244,10 @@ const rules : Rules.React = {
         },
     ],
 
+    // Disallow multiple spaces between inline JSX props
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md
+    'react/jsx-props-no-multi-spaces': 'error',
+
     // Enforce defaultProps declarations alphabetical sorting
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
     'react/jsx-sort-default-props': [
@@ -359,6 +363,10 @@ const rules : Rules.React = {
     // Prevent usage of shouldComponentUpdate when extending React.PureComponent
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
     'react/no-redundant-should-component-update': 'error',
+
+    // Prevent usage of the return value of React.render
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
+    'react/no-render-return-value': 'error',
 
     // Prevent usage of setState
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
