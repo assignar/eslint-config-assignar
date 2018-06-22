@@ -26,9 +26,3 @@ ci:
 .PHONY: regenerate-types
 regenerate-types:
 	@yarn ts-node ./scripts/generateTypes.ts
-
-
-.PHONY: publish
-publish:
-	# todo - integrate this into assignar-cli
-	@yarn lerna publish --skip-git --skip-npm --preid=rc
