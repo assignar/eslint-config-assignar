@@ -5,13 +5,7 @@
     "repository": "https://github.com/assignar/eslint-config-assignar.git",
     "author": "Brad Zacher <brad.zacher@gmail.com>",
     "main": "./dist/index.js",
-    "peerDependencies": {
-        "eslint": "^4.19.0"
-    },
     "dependencies": {
         "eslint-config-assignar-base": "^0.0.0"
-    },
-    "devDependencies": {
-        "typescript": "^2.9.2"
     }
 }

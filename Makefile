@@ -15,7 +15,6 @@ show-unused:
 
 .PHONY: ci
 ci:
-	@yarn lerna bootstrap
 # build first because the lint is based off this package!
 	@make build
 # make sure there are no lint errors

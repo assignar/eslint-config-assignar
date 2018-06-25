@@ -4,7 +4,8 @@ base ts/eslint configuration files for common configuration
 ## Developing
 
 Clone the repo, and then install the dependencies:
-`yarn install && yarn lerna bootstrap`
+`yarn install`
+Note that you need a current version of yarn `>1.0.0` for this to work correctly, as this repo uses yarn workspaces to link packages.
 
 Available Commands:
 - `make build` - run a typescript build on each package

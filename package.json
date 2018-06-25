@@ -33,5 +33,10 @@
         "lint": "eslint --cache ./packages --ext .ts",
         "ci": "make ci",
         "regenerate-types": "ts-node ./scripts/generateTypes.ts"
-    }
+    },
+    "workspaces": [
+        "packages/eslint-config-assignar-base",
+        "packages/eslint-config-assignar-node",
+        "packages/eslint-config-assignar-react"
+    ]
 }
