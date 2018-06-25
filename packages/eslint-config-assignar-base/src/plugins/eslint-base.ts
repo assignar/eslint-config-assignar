@@ -446,6 +446,13 @@ const rules : Rules.Eslint = {
         },
     ],
 
+    // This rule enforces that each file may contain only a particular number of classes and no more.
+    // https://eslint.org/docs/rules/max-classes-per-file
+    'max-classes-per-file': [
+        'error',
+        1,
+    ],
+
     // This rule enforces a maximum depth that blocks can be nested to reduce code complexity.
     // https://eslint.org/docs/rules/max-depth
     'max-depth': [
@@ -469,6 +476,18 @@ const rules : Rules.Eslint = {
     // This rule enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity.
     // https://eslint.org/docs/rules/max-lines
     'max-lines': 'off',
+
+    // This rule enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity.
+    // https://eslint.org/docs/rules/max-lines-per-function
+    'max-lines-per-function': [
+        'off',
+        {
+            max: 50,
+            skipBlankLines: true,
+            skipComments: true,
+            IIFEs: true,
+        },
+    ],
 
     // his rule enforces a maximum depth that callbacks can be nested to increase code clarity.
     // https://eslint.org/docs/rules/max-nested-callbacks
@@ -1405,6 +1424,10 @@ const rules : Rules.Eslint = {
     // a string; and a radix option of 2 (binary), 8 (octal), or 16 (hexadecimal).
     // https://eslint.org/docs/rules/prefer-numeric-literals
     'prefer-numeric-literals': 'error',
+
+    // Prefer use of an object spread over Object.assign
+    // https://eslint.org/docs/rules/prefer-object-spread
+    'prefer-object-spread': 'off',
 
     // require using Error objects as Promise rejection reasons
     // https://eslint.org/docs/rules/prefer-promise-reject-errors

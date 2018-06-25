@@ -30,17 +30,18 @@ const typesFile = [
     `${indent}}`,
     `${indent}export type RuleType = RuleString | RuleArray`,
     ...Object.keys(rulesPerPlugin).map((k) => {
-        const interfaceCamel = k.replace(/(\-\w)/g, m => m[1].toUpperCase())
+        const interfaceCamel = k.replace(/(-\w)/g, m => m[1].toUpperCase())
         const interfacePascal = interfaceCamel[0].toUpperCase() + interfaceCamel.substr(1)
 
         return [
             `export interface ${interfacePascal} {`,
-            ...rulesPerPlugin[k].map((rule) => `${indent} '${rule}' : RuleType`),
+            ...rulesPerPlugin[k].map(rule => `${indent} '${rule}' : RuleType`),
             '}',
         ].map(s => `${indent}${s}`).join('\n')
     }),
     '}',
+    '',
 ].join('\n')
 
 fs.writeFileSync(path.resolve(__dirname, '../types/eslint-config.d.ts'), typesFile, 'utf8')
-console.log('Successfully Written.')
+console.info('Successfully Written.')

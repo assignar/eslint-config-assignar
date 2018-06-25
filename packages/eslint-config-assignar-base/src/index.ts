@@ -30,7 +30,10 @@ module.exports = {
         },
     ],
     plugins: [
-        eslintComments.name, imprt.name, jest.name, typescript.name,
+        eslintComments.name,
+        imprt.name,
+        jest.name,
+        typescript.name,
     ],
     parser: 'typescript-eslint-parser',
     parserOptions: {

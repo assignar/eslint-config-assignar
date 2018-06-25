@@ -8,23 +8,15 @@
     "license": "MIT",
     "devDependencies": {
         "@types/eslint": "^4.16.2",
-        "@types/node": "^10.3.4",
-        "eslint": "^4.19.1",
+        "@types/node": "^10.3.5",
+        "eslint": "^5.0.0",
         "eslint-find-rules": "^3.2.3",
         "eslint-import-resolver-node": "^0.3.2",
-        "eslint-plugin-eslint-comments": "^2.0.2",
-        "eslint-plugin-graphql": "^2.1.1",
-        "eslint-plugin-import": "^2.9.0",
-        "eslint-plugin-jest": "^21.15.0",
-        "eslint-plugin-react": "^7.9.1",
-        "eslint-plugin-typescript": "^0.12.0",
-        "eslint-restricted-globals": "^0.1.1",
         "graphql": "^0.13.2",
         "lerna": "^2.11.0",
         "rimraf": "^2.6.2",
-        "ts-node": "^6.1.2",
-        "typescript": "^2.9.2",
-        "typescript-eslint-parser": "^16.0.0"
+        "ts-node": "^7.0.0",
+        "typescript": "^2.9.2"
     },
     "scripts": {
         "typecheck": "tsc -p ./tsconfig.json --noEmit",
@@ -32,7 +24,7 @@
         "clean": "rimraf -g ./packages/*/dist/",
         "lint": "eslint --cache ./packages --ext .ts",
         "ci": "make ci",
-        "regenerate-types": "ts-node ./scripts/generateTypes.ts"
+        "regenerate-types": "make regenerate-types"
     },
     "workspaces": [
         "packages/eslint-config-assignar-base",

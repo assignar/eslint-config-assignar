@@ -60,9 +60,11 @@ declare namespace Rules {
          'linebreak-style' : RuleType
          'lines-around-comment' : RuleType
          'lines-between-class-members' : RuleType
+         'max-classes-per-file' : RuleType
          'max-depth' : RuleType
          'max-len' : RuleType
          'max-lines' : RuleType
+         'max-lines-per-function' : RuleType
          'max-nested-callbacks' : RuleType
          'max-params' : RuleType
          'max-statements' : RuleType
@@ -219,6 +221,7 @@ declare namespace Rules {
          'prefer-const' : RuleType
          'prefer-destructuring' : RuleType
          'prefer-numeric-literals' : RuleType
+         'prefer-object-spread' : RuleType
          'prefer-promise-reject-errors' : RuleType
          'prefer-rest-params' : RuleType
          'prefer-spread' : RuleType
@@ -303,6 +306,7 @@ declare namespace Rules {
          'import/no-named-default' : RuleType
          'import/no-namespace' : RuleType
          'import/no-nodejs-modules' : RuleType
+         'import/no-relative-parent-imports' : RuleType
          'import/no-restricted-paths' : RuleType
          'import/no-self-import' : RuleType
          'import/no-unassigned-import' : RuleType

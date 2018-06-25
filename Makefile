@@ -9,9 +9,15 @@ lint:
 
 .PHONY: show-unused
 show-unused:
-	@yarn eslint-find-rules ./packages/eslint-config-assignar-base/dist/index.js --unused
-	@yarn eslint-find-rules ./packages/eslint-config-assignar-node/dist/index.js --unused
-	@yarn eslint-find-rules ./packages/eslint-config-assignar-react/dist/index.js --unused
+	@echo base...
+	@npx eslint-find-rules ./packages/eslint-config-assignar-base/dist/index.js --unused
+	@echo Done
+	@echo node...
+	@npx eslint-find-rules ./packages/eslint-config-assignar-node/dist/index.js --unused
+	@echo Done
+	@echo react...
+	@npx eslint-find-rules ./packages/eslint-config-assignar-react/dist/index.js --unused
+	@echo Done
 
 .PHONY: ci
 ci:
@@ -20,8 +26,9 @@ ci:
 # make sure there are no lint errors
 	@make lint
 # make sure there are no unused rules in any package
+	# show-unused
 	@make show-unused
 
 .PHONY: regenerate-types
 regenerate-types:
-	@yarn ts-node ./scripts/generateTypes.ts
+	@yarn ts-node -P ./scripts/tsconfig.json --files ./scripts/generateTypes.ts

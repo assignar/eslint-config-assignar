@@ -146,6 +146,10 @@ const rules : Rules.Import = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
     'import/no-nodejs-modules': 'off',
 
+    // Use this rule to prevent imports to folders in relative parent paths.
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
+    'import/no-relative-parent-imports': 'off', // todo - enable?
+
     // Restrict which files can be imported in a given folder
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
     'import/no-restricted-paths': 'off',

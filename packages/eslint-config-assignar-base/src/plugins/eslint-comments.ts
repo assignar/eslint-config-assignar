@@ -38,10 +38,10 @@ const rules : Rules.EslintComments = {
         'error',
         {
             allow: [
-                'eslint-enable',
                 'eslint-disable',
                 'eslint-disable-line',
                 'eslint-disable-next-line',
+                'eslint-enable',
             ],
         },
     ],
