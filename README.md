@@ -13,6 +13,14 @@ Available Commands:
 - `make show-unused` - scan the packages and their plugins to find any rules that haven't been defined
 - `make regenerate-types` - generate the typescript definition files for all of the valid, non-deprecated rules
 
+### PR requirements
+
+A PR cannot be merged unless the `make ci` command passes.
+I.e. the requirements are:
+- Build must pass `make build`
+- Lint must pass `make lint`
+- There should be no unused rules `make show-unused`
+
 ### Publishing
 
 Make sure you `yarn global add @assignar/cli`.
