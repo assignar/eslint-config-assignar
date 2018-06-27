@@ -184,17 +184,20 @@ const rules : Rules.Import = {
     // Enforce a convention in module import order
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     'import/order': [
-        'error',
+        // TODO - this rule doesn't seem to work...
+        'off',
         {
             groups: [
                 'builtin',
                 'external',
                 'internal',
-                'parent',
-                'sibling',
-                'index',
+                [
+                    'parent',
+                    'sibling',
+                    'index',
+                ],
             ],
-            'newlines-between': 'always',
+            'newlines-between': 'ignore',
         },
     ],
 
