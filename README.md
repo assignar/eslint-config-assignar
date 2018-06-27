@@ -25,3 +25,18 @@ I.e. the requirements are:
 
 Make sure you `yarn global add @assignar/cli`.
 Then run `assignar publish [major|minor|patch] [--rc] --lerna`
+
+### Updating dependencies
+
+Using yarn workspaces means this project has one `node_modules` folder, however each package has its own `package.json`.
+You can check the *entire* project for outdated dependencies by using `yarn outdated` from **anywhere** (underneath the root).
+
+You'll end up with output that lists the specific package the dependency is outdated on:
+```
+Package             Current Wanted Latest Workspace                    Package Type    URL
+@types/node         10.3.5  10.3.6 10.3.6 eslint-config-assignar       devDependencies https://github.com/DefinitelyTyped/DefinitelyTyped.git
+eslint              5.0.0   5.0.1  5.0.1  eslint-config-assignar-base  dependencies    https://eslint.org
+```
+
+To update dependencies in the root package.json, you must use `yarn add -W <dep>`. If you don't, yarn will throw an error at you.
+To update dependencies in any of the sub-package's package.json, you have to CD to the directory, and then you can just do `yarn add <dep>` as per usual.

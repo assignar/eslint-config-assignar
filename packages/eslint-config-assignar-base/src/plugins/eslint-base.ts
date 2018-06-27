@@ -330,10 +330,8 @@ const rules : Rules.Eslint = {
 
     // This rule aims to enforce a consistent location for an arrow function containing an implicit return.
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
-    'implicit-arrow-linebreak': [
-        'error',
-        'beside',
-    ],
+    // In testing - this rule is again just plain annoying because it prevents you from breaking a line if it's long
+    'implicit-arrow-linebreak': 'off',
 
     // This rule enforces a consistent indentation style.
     // https://eslint.org/docs/rules/indent
@@ -438,13 +436,8 @@ const rules : Rules.Eslint = {
 
     // require or disallow an empty line between class members
     // https://eslint.org/docs/rules/lines-between-class-members
-    'lines-between-class-members': [
-        'error',
-        'always',
-        {
-            exceptAfterSingleLine: false,
-        },
-    ],
+    // In testing - this rule is just plain annoying and bloats the class defs, esp if there are a number of getter/setters
+    'lines-between-class-members': 'off',
 
     // This rule enforces that each file may contain only a particular number of classes and no more.
     // https://eslint.org/docs/rules/max-classes-per-file
