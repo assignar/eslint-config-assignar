@@ -1,0 +1,15 @@
+{
+  "lerna": "2.11.0",
+  "npmClient": "yarn",
+  "packages": [
+    "packages/eslint-config-assignar-base",
+    "packages/eslint-config-assignar-node",
+    "packages/eslint-config-assignar-react"
+  ],
+  "version": "0.1.0",
+  "publish": {
+    "allowBranch": [
+      "develop"
+    ]
+  }
+}

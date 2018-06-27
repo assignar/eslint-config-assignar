@@ -1,0 +1,34 @@
+{
+    "name": "eslint-config-assignar",
+    "private": true,
+    "version": "0.0.0",
+    "description": "Assignar's ESlint config",
+    "repository": "https://github.com/assignar/eslint-config-assignar.git",
+    "author": "Brad Zacher <brad.zacher@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/eslint": "^4.16.2",
+        "@types/node": "^10.3.6",
+        "eslint": "^5.0.1",
+        "eslint-find-rules": "^3.3.1",
+        "eslint-import-resolver-node": "^0.3.2",
+        "graphql": "^0.13.2",
+        "lerna": "^2.11.0",
+        "rimraf": "^2.6.2",
+        "ts-node": "^7.0.0",
+        "typescript": "^2.9.2"
+    },
+    "scripts": {
+        "typecheck": "tsc -p ./tsconfig.json --noEmit",
+        "build": "make build",
+        "clean": "rimraf -g ./packages/*/dist/",
+        "lint": "eslint --cache ./packages --ext .ts",
+        "ci": "make ci",
+        "regenerate-types": "make regenerate-types"
+    },
+    "workspaces": [
+        "packages/eslint-config-assignar-base",
+        "packages/eslint-config-assignar-node",
+        "packages/eslint-config-assignar-react"
+    ]
+}
