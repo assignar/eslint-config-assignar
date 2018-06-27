@@ -1,12 +1,12 @@
 {
     "name": "eslint-config-assignar-react",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "license": "MIT",
     "repository": "https://github.com/assignar/eslint-config-assignar.git",
     "author": "Brad Zacher <brad.zacher@gmail.com>",
     "main": "./dist/index.js",
     "dependencies": {
-        "eslint-config-assignar-base": "^0.0.0",
+        "eslint-config-assignar-base": "^0.1.0",
         "eslint-plugin-react": "^7.10.0"
     }
 }
