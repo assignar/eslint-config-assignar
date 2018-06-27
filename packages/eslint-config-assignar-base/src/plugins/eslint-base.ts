@@ -506,8 +506,9 @@ const rules : Rules.Eslint = {
 
     // This rule aims to enforce a particular style for multiline comments.
     // https://eslint.org/docs/rules/multiline-comment-style
+    // TODO - do we want to enable this?
     'multiline-comment-style': [
-        'error',
+        'off',
         'starred-block',
     ],
 
