@@ -392,6 +392,10 @@ const rules : Rules.React = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
     'react/no-unknown-property': 'error',
 
+    // Prevent usage of UNSAFE_ methods
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
+    'react/no-unsafe': 'error',
+
     // Prevent unused propType definitions
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
     'react/no-unused-prop-types': [

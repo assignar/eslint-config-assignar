@@ -397,6 +397,7 @@ declare namespace Rules {
          'react/no-typos' : RuleType
          'react/no-unescaped-entities' : RuleType
          'react/no-unknown-property' : RuleType
+         'react/no-unsafe' : RuleType
          'react/no-unused-prop-types' : RuleType
          'react/no-unused-state' : RuleType
          'react/no-will-update-set-state' : RuleType
