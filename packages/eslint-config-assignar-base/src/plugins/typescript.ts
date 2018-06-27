@@ -16,8 +16,11 @@ const rules : Rules.Typescript = {
     'typescript/explicit-member-accessibility': 'error',
 
     // Prefixing interfaces with "I" can help telling them apart at a glance.
-    // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/explicit-member-accessibility.md
-    'typescript/interface-name-prefix': 'off',
+    // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/interface-name-prefix.md
+    'typescript/interface-name-prefix': [
+        'error',
+        'never',
+    ],
 
     // Enforces a consistent member delimiter style in interfaces and type literals.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/member-delimiter-style.md
@@ -56,8 +59,8 @@ const rules : Rules.Typescript = {
 
     // This rule goes doesn't allow any types to be defined
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-explicit-any.md
-    // this is on to discourage it - it can be specifically disabled in code if there's a valid use case
-    'typescript/no-explicit-any': 'error',
+    // warn discourage it - it can be specifically disabled in code if there's a valid use case
+    'typescript/no-explicit-any': 'warn',
 
     // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-inferrable-types.md
@@ -75,7 +78,8 @@ const rules : Rules.Typescript = {
 
     // Using non-null assertions cancels the benefits of the strict null-checking mode
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-non-null-assertion.md
-    'typescript/no-non-null-assertion': 'off',
+    // warn discourage it - it can be specifically disabled in code if there's a valid use case
+    'typescript/no-non-null-assertion': 'warn',
 
     // This rule disallows the use of parameter properties in constructors,
     // forcing the user to explicitly declare all properties in the class.
@@ -84,6 +88,7 @@ const rules : Rules.Typescript = {
 
     // Does not allow the use of /// <reference /> comments.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-triple-slash-reference.md
+    // warn discourage it - it can be specifically disabled in code if there's a valid use case
     'typescript/no-triple-slash-reference': 'warn',
 
     // Disallow the use of type aliases
