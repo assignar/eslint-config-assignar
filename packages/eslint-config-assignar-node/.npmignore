@@ -1,6 +1,6 @@
 **/*
-!./dist/**/*.json
-!./dist/**/*.js
-!./dist/**/*.js.map
-!./package.json
-!./README.md
+!dist/**/*.json
+!dist/**/*.js
+!dist/**/*.js.map
+!package.json
+!README.md
