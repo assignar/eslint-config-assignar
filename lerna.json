@@ -6,7 +6,7 @@
     "packages/eslint-config-assignar-node",
     "packages/eslint-config-assignar-react"
   ],
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publish": {
     "allowBranch": [
       "develop"
