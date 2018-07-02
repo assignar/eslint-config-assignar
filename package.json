@@ -7,8 +7,8 @@
     "author": "Brad Zacher <brad.zacher@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "@types/eslint": "^4.16.2",
-        "@types/node": "^10.3.6",
+        "@types/eslint": "^4.16.3",
+        "@types/node": "^10.5.1",
         "eslint": "^5.0.1",
         "eslint-find-rules": "^3.3.1",
         "eslint-import-resolver-node": "^0.3.2",
