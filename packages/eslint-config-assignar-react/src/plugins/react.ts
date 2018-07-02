@@ -473,8 +473,9 @@ const rules : Rules.React = {
 
     // Enforce component methods order
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
+    // this rule is too breaking. it enforces a weird ordering that doesn't always make sense
     'react/sort-comp': [
-        'error',
+        'off',
         {
             order: [
                 'static-methods',

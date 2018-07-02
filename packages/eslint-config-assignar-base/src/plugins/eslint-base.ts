@@ -1203,8 +1203,9 @@ const rules : Rules.Eslint = {
 
     // disallow declaration of variables that are not used in the code
     // https://eslint.org/docs/rules/no-unused-vars
+    // We don't need this as  this is caught by the typescript compiler
     'no-unused-vars': [
-        'error',
+        'off',
         {
             vars: 'all',
             args: 'after-used',
@@ -1549,7 +1550,8 @@ const rules : Rules.Eslint = {
 
     // require spaces around operators
     // https://eslint.org/docs/rules/space-infix-ops
-    'space-infix-ops': 'error',
+    // TODO[BUG] - enable this when this is resolved - https://github.com/eslint/typescript-eslint-parser/issues/486
+    'space-infix-ops': 'off',
 
     // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops

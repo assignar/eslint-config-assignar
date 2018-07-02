@@ -18,13 +18,25 @@ module.exports = {
                 'src/**/*.spec.tsx',
                 'src/**/*.test.ts',
                 'src/**/*.test.tsx',
-                'src/**/__mocks__/*',
+                'src/**/__mocks__/**/*',
+                'src/**/__mock__/**/*',
                 'test/**/*',
-                'types/**/*',
             ],
             rules: {
                 'typescript/no-explicit-any': 'off',
+                'typescript/no-non-null-assertion': 'off',
+                'import/prefer-default-export': 'off',
                 'max-len': 'off',
+                strict: 'off',
+            },
+        },
+        {
+            // disable certain rules for typings as eslint misdetects them
+            files: [
+                '**/*.d.ts',
+            ],
+            rules: {
+                'typescript/no-explicit-any': 'off',
                 strict: 'off',
             },
         },
