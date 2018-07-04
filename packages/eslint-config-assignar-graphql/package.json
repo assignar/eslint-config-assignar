@@ -1,0 +1,14 @@
+{
+    "name": "@assignar/eslint-config-assignar-graphql",
+    "version": "0.2.0",
+    "license": "MIT",
+    "repository": "https://github.com/assignar/eslint-config-assignar.git",
+    "author": "Brad Zacher <brad.zacher@gmail.com>",
+    "main": "./dist/index.js",
+    "dependencies": {
+        "eslint-plugin-graphql": "^2.1.1"
+    },
+    "peerDependencies": {
+        "graphql": "*"
+    }
+}

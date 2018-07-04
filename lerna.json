@@ -3,6 +3,7 @@
   "npmClient": "yarn",
   "packages": [
     "packages/eslint-config-assignar-base",
+    "packages/eslint-config-assignar-graphql",
     "packages/eslint-config-assignar-node",
     "packages/eslint-config-assignar-react"
   ],
