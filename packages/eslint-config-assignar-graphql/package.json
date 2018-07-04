@@ -1,6 +1,6 @@
 {
     "name": "@assignar/eslint-config-assignar-graphql",
-    "version": "1.0.0",
+    "version": "1.0.1-rc.0",
     "license": "MIT",
     "repository": "https://github.com/assignar/eslint-config-assignar.git",
     "author": "Brad Zacher <brad.zacher@gmail.com>",
