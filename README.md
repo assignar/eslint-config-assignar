@@ -1,6 +1,17 @@
 # lint-config-base
 base ts/eslint configuration files for common configuration
 
+## Installation
+
+If you're working in backend repo:
+`yarn add eslint-config-assignar-node`
+If you're working in a front-end repo:
+`yarn add eslint-config-assignar-react`
+
+If your repo touches the graphql APIs:
+`yarn add @assignar/eslint-config-assignar-graphql`
+
+
 ## Developing
 
 Clone the repo, and then install the dependencies:
@@ -13,6 +24,7 @@ Available Commands:
 - `make show-unused` - scan the packages and their plugins to find any rules that haven't been defined
 - `make regenerate-types` - generate the typescript definition files for all of the valid, non-deprecated rules
 
+
 ### PR requirements
 
 A PR cannot be merged unless the `make ci` command passes.
@@ -21,10 +33,12 @@ I.e. the requirements are:
 - Lint must pass `make lint`
 - There should be no unused rules `make show-unused`
 
+
 ### Publishing
 
 Make sure you `yarn global add @assignar/cli`.
 Then run `assignar publish [major|minor|patch] [--rc] --lerna`
+
 
 ### Updating dependencies
 
@@ -40,3 +54,4 @@ eslint              5.0.0   5.0.1  5.0.1  eslint-config-assignar-base  dependenc
 
 To update dependencies in the root package.json, you must use `yarn add -W <dep>`. If you don't, yarn will throw an error at you.
 To update dependencies in any of the sub-package's package.json, you have to CD to the directory, and then you can just do `yarn add <dep>` as per usual.
+

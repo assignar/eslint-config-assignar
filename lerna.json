@@ -3,10 +3,11 @@
   "npmClient": "yarn",
   "packages": [
     "packages/eslint-config-assignar-base",
+    "packages/eslint-config-assignar-graphql",
     "packages/eslint-config-assignar-node",
     "packages/eslint-config-assignar-react"
   ],
-  "version": "0.2.0",
+  "version": "1.0.0",
   "publish": {
     "allowBranch": [
       "develop"
