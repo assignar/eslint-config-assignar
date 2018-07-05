@@ -4,6 +4,10 @@
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "declaration": false,
+        "lib": [
+            "es6",
+            "esnext.asynciterable"
+        ],
         "moduleResolution": "node",
         "module": "commonjs",
         "noEmit": true,
