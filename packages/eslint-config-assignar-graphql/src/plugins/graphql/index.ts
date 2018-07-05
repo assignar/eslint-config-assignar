@@ -1,9 +1,4 @@
-import personalJson = require('./schemas/personal.json')
-import mutationJson = require('./schemas/mutation.json')
-import standardJson = require('./schemas/standard.json')
-import reportingJson = require('./schemas/reporting.json')
-
-// TODO - figure out how to make the schema imports independent of this repo...
+import * as schemas from '@assignar/api-schemas'
 
 // don't configure the graphql ruleset if graphql is not installed
 const ruleConfig = [
@@ -11,22 +6,22 @@ const ruleConfig = [
     {
         env: 'apollo',
         tagName: 'gqlPersonal',
-        schemaJson: personalJson,
+        schemaJson: schemas.personalJson,
     },
     {
         env: 'apollo',
         tagName: 'gqlMutation',
-        schemaJson: mutationJson,
+        schemaJson: schemas.mutationJson,
     },
     {
         env: 'apollo',
         tagName: 'gqlStandard',
-        schemaJson: standardJson,
+        schemaJson: schemas.standardJson,
     },
     {
         env: 'apollo',
         tagName: 'gqlReporting',
-        schemaJson: reportingJson,
+        schemaJson: schemas.reportingJson,
     },
 ]
 
