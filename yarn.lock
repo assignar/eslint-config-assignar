@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@assignar/api-schemas@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@assignar/api-schemas/-/api-schemas-5.0.2.tgz#6e155eaf785b528a9106e8db71dc35ffa0e0b74a"
+
 "@types/eslint@^4.16.3":
   version "4.16.3"
   resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-4.16.3.tgz#6ed2a9c68f73162fa57ba84582d63dcd8ee2d473"
@@ -12,6 +16,10 @@
 "@types/estree@*":
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
+
+"@types/graphql@^0.13.3":
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.13.3.tgz#23af65796d341f93ef5b485138bd52c67786452d"
 
 "@types/json-schema@*":
   version "6.0.1"

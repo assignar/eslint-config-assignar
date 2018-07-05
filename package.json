@@ -7,7 +7,9 @@
     "author": "Brad Zacher <brad.zacher@gmail.com>",
     "license": "MIT",
     "devDependencies": {
+        "@assignar/api-schemas": "^5.0.2",
         "@types/eslint": "^4.16.3",
+        "@types/graphql": "^0.13.3",
         "@types/node": "^10.5.1",
         "eslint": "^5.0.1",
         "eslint-find-rules": "^3.3.1",
