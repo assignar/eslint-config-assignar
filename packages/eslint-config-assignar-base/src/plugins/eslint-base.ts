@@ -1376,7 +1376,14 @@ const rules : Rules.Eslint = {
 
     // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements
-    'padding-line-between-statements': 'off',
+    'padding-line-between-statements': [
+        'error',
+        {
+            blankLine: 'always',
+            prev: '*',
+            next: 'return',
+        },
+    ],
 
     // Require using arrow functions for callbacks
     // https://eslint.org/docs/rules/prefer-arrow-callback
