@@ -1577,7 +1577,7 @@ const rules : Rules.Eslint = {
         'warn',
         'always',
         {
-            exceptions: [
+            markers: [
                 '*',
                 '/',
             ],
