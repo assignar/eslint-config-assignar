@@ -75,6 +75,7 @@ declare namespace Rules {
          'new-parens' : RuleType
          'newline-per-chained-call' : RuleType
          'no-alert' : RuleType
+         'no-async-promise-executor' : RuleType
          'no-array-constructor' : RuleType
          'no-await-in-loop' : RuleType
          'no-bitwise' : RuleType
@@ -132,6 +133,7 @@ declare namespace Rules {
          'no-lonely-if' : RuleType
          'no-loop-func' : RuleType
          'no-magic-numbers' : RuleType
+         'no-misleading-character-class' : RuleType
          'no-mixed-operators' : RuleType
          'no-mixed-requires' : RuleType
          'no-mixed-spaces-and-tabs' : RuleType
@@ -229,8 +231,10 @@ declare namespace Rules {
          'quote-props' : RuleType
          'quotes' : RuleType
          'radix' : RuleType
+         'require-atomic-updates' : RuleType
          'require-await' : RuleType
          'require-jsdoc' : RuleType
+         'require-unicode-regexp' : RuleType
          'require-yield' : RuleType
          'rest-spread-spacing' : RuleType
          'semi' : RuleType
@@ -318,23 +322,27 @@ declare namespace Rules {
          'import/unambiguous' : RuleType
     }
     export interface Jest {
-         'jest/consistent-test-it' : RuleType
-         'jest/lowercase-name' : RuleType
-         'jest/no-disabled-tests' : RuleType
-         'jest/no-focused-tests' : RuleType
-         'jest/no-hooks' : RuleType
-         'jest/no-identical-title' : RuleType
-         'jest/no-jasmine-globals' : RuleType
-         'jest/no-jest-import' : RuleType
-         'jest/no-large-snapshots' : RuleType
-         'jest/no-test-prefixes' : RuleType
-         'jest/prefer-expect-assertions' : RuleType
-         'jest/prefer-to-be-null' : RuleType
-         'jest/prefer-to-be-undefined' : RuleType
-         'jest/prefer-to-have-length' : RuleType
-         'jest/valid-describe' : RuleType
-         'jest/valid-expect' : RuleType
-         'jest/valid-expect-in-promise' : RuleType
+        'jest/consistent-test-it' : RuleType
+        'jest/expect-expect' : RuleType
+        'jest/lowercase-name' : RuleType
+        'jest/no-disabled-tests' : RuleType
+        'jest/no-focused-tests' : RuleType
+        'jest/no-hooks' : RuleType
+        'jest/no-identical-title' : RuleType
+        'jest/no-jasmine-globals' : RuleType
+        'jest/no-jest-import' : RuleType
+        'jest/no-large-snapshots' : RuleType
+        'jest/no-test-prefixes' : RuleType
+        'jest/no-test-return-statement' : RuleType
+        'jest/prefer-expect-assertions' : RuleType
+        'jest/prefer-inline-snapshots' : RuleType
+        'jest/prefer-strict-equal' : RuleType
+        'jest/prefer-to-be-null' : RuleType
+        'jest/prefer-to-be-undefined' : RuleType
+        'jest/prefer-to-have-length' : RuleType
+        'jest/valid-describe' : RuleType
+        'jest/valid-expect' : RuleType
+        'jest/valid-expect-in-promise' : RuleType
     }
     export interface React {
          'react/boolean-prop-naming' : RuleType
