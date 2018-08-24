@@ -9,6 +9,10 @@ const rules : Rules.Jest = {
         },
     ],
 
+    // Ensure that there is at least one expect call made in a test
+    // https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/expect-expect.md
+    'jest/expect-expect': 'error',
+
     // Enforce it, test and describe to have descriptions that begin with a lowercase letter.
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/lowercase-name.md
     'jest/lowercase-name': [
@@ -50,10 +54,22 @@ const rules : Rules.Jest = {
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-prefixes.md
     'jest/no-test-prefixes': 'error',
 
+    // Disallow explicitly returning from tests
+    // https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/no-test-return-statement.md
+    'jest/no-test-return-statement': 'error',
+
     // Suggest using expect.assertions() OR expect.hasAssertions()
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-expect-assertions.md
     // this rule adds no real value
     'jest/prefer-expect-assertions': 'off',
+
+    // Suggest using inline snapshots
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md
+    'jest/prefer-inline-snapshots': 'off',
+
+    // Suggest using toStrictEqual()
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-strict-equal.md
+    'jest/prefer-strict-equal': 'off',
 
     // Suggest using toBeNull()
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-be-null.md

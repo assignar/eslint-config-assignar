@@ -548,6 +548,10 @@ const rules : Rules.Eslint = {
     // https://eslint.org/docs/rules/no-array-constructor
     'no-array-constructor': 'error',
 
+    // The new Promise constructor accepts an executor function as an argument, which has resolve and reject parameters that can be used to control the state of the created Promise
+    // https://eslint.org/docs/rules/no-async-promise-executor
+    'no-async-promise-executor': 'error',
+
     // This rule disallows the use of await within loop bodies.
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 'error',
@@ -815,6 +819,10 @@ const rules : Rules.Eslint = {
     // This rule aims to make code more readable by ensuring that special numbers are declared as constants
     // https://eslint.org/docs/rules/no-magic-numbers
     'no-magic-numbers': 'off',
+
+    // Disallow characters which are made with multiple code points in character class syntax, basically disallows emojis to be used as class names
+    // https://eslint.org/docs/rules/no-misleading-character-class
+    'no-misleading-character-class': 'error',
 
     // Disallow mixes of different operators
     // https://eslint.org/docs/rules/no-mixed-operators
@@ -1477,12 +1485,20 @@ const rules : Rules.Eslint = {
     radix: 'error',
 
     // This rule warns async functions which have no await expression
+    // https://eslint.org/docs/rules/require-atomic-updates
+    'require-atomic-updates': 'error',
+
+    // This rule warns async functions which have no await expression
     // https://eslint.org/docs/rules/require-await
     'require-await': 'error',
 
     // This rule requires JSDoc comments for specified nodes
     // https://eslint.org/docs/rules/require-jsdoc
     'require-jsdoc': 'off',
+
+    // Enforce the use of u flag on RegExp
+    // https://eslint.org/docs/rules/require-unicode-regexp
+    'require-unicode-regexp': 'off',
 
     // This rule generates warnings for generator functions that do not have the yield keyword.
     // https://eslint.org/docs/rules/require-yield
