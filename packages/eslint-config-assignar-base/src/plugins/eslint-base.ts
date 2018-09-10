@@ -1364,7 +1364,7 @@ const rules : Rules.Eslint = {
         'before',
         {
             overrides: {
-                '=': 'none',
+                '=': 'before',
                 '?': 'before',
                 ':': 'before',
             },
