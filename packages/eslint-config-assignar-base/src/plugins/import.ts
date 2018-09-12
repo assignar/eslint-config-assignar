@@ -1,4 +1,4 @@
-const rules : Rules.Import = {
+const rules: Rules.Import = {
     // ensure default import coupled with default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
     'import/default': 'error',
@@ -175,7 +175,7 @@ const rules : Rules.Import = {
 
     // Ensures that there are no useless path segments
     // https://github.com/benmosher/eslint-plugin-import/issues/1032
-    'import/no-useless-path-segments': 'error',
+    'import/no-useless-path-segments': 'off',
 
     // Forbid Webpack loader syntax in imports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
