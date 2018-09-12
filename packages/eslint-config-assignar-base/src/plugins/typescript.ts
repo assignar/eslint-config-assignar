@@ -1,4 +1,4 @@
-const rules : Rules.Typescript = {
+const rules: Rules.Typescript = {
     // Grouping overloaded members together can improve readability of the code.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/adjacent-overload-signatures.md
     'typescript/adjacent-overload-signatures': 'error',
@@ -18,7 +18,7 @@ const rules : Rules.Typescript = {
     // Prefixing interfaces with "I" can help telling them apart at a glance.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/interface-name-prefix.md
     'typescript/interface-name-prefix': [
-        'error',
+        'warn',
         'never',
     ],
 
@@ -117,8 +117,12 @@ const rules : Rules.Typescript = {
     'typescript/type-annotation-spacing': [
         'error',
         {
-            before: true,
+            before: false,
             after: true,
+            overrides: {
+                arrow: { before: true, after: true },
+                colon: { before: false, after: true },
+            },
         },
     ],
 }
