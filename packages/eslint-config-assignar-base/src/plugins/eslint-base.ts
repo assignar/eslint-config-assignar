@@ -1573,8 +1573,7 @@ const rules: Rules.Eslint = {
 
     // require spaces around operators
     // https://eslint.org/docs/rules/space-infix-ops
-    // TODO[BUG] - enable this when this is resolved - https://github.com/eslint/typescript-eslint-parser/issues/486
-    'space-infix-ops': 'off',
+    'space-infix-ops': 'error',
 
     // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops
