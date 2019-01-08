@@ -573,11 +573,6 @@ const rules: Rules.Eslint = {
     // https://eslint.org/docs/rules/no-case-declarations
     'no-case-declarations': 'error',
 
-    // This rule is aimed at preventing unexpected behavior in your program that may arise from a bug in IE 8 and
-    // earlier, in which the catch clause parameter can leak into outer scopes.
-    // https://eslint.org/docs/rules/no-catch-shadow
-    'no-catch-shadow': 'off',
-
     // disallow modifying variables of class declarations
     // https://eslint.org/docs/rules/no-class-assign
     'no-class-assign': 'error',
