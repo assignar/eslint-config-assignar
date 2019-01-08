@@ -34,7 +34,5 @@
         "packages/eslint-config-assignar-node",
         "packages/eslint-config-assignar-react"
     ],
-    "dependencies": {
-        "typescript-eslint-parser": "^20.0.0"
-    }
+    "dependencies": {}
 }

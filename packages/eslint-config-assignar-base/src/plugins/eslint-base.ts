@@ -97,12 +97,7 @@ const rules: Rules.Eslint = {
     // Otherwise, a warning will be thrown. This rule only flags definitions and assignments but not function calls.
     // In case of ES6 import statements, this rule only targets the name of the variable that will be imported into the local module scope.
     // https://eslint.org/docs/rules/camelcase
-    camelcase: [
-        'error',
-        {
-            properties: 'never',
-        },
-    ],
+    camelcase: 'off',
 
     // This rule aims to enforce a consistent style of comments across your codebase.
     // https://eslint.org/docs/rules/capitalized-comments
