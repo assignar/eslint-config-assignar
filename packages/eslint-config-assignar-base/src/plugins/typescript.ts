@@ -52,7 +52,7 @@ const rules: Rules.Typescript = {
                 requireLast: true,
             },
             singleline: {
-                delimiter: 'none',
+                delimiter: 'comma',
                 requireLast: false,
             },
         },
