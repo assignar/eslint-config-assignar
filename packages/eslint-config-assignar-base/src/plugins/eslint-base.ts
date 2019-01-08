@@ -330,47 +330,7 @@ const rules: Rules.Eslint = {
 
     // This rule enforces a consistent indentation style.
     // https://eslint.org/docs/rules/indent
-    indent: [
-        'error',
-        4,
-        {
-            SwitchCase: 1,
-            VariableDeclarator: 1,
-            outerIIFEBody: 1,
-            FunctionDeclaration: {
-                parameters: 1,
-                body: 1,
-            },
-            FunctionExpression: {
-                parameters: 1,
-                body: 1,
-            },
-            CallExpression: {
-                arguments: 1,
-            },
-            ArrayExpression: 1,
-            ObjectExpression: 1,
-            ImportDeclaration: 1,
-            flatTernaryExpressions: false,
-            // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
-            ignoredNodes: [
-                'JSXElement',
-                'JSXElement > *',
-                'JSXAttribute',
-                'JSXIdentifier',
-                'JSXNamespacedName',
-                'JSXMemberExpression',
-                'JSXSpreadAttribute',
-                'JSXExpressionContainer',
-                'JSXOpeningElement',
-                'JSXClosingElement',
-                'JSXText',
-                'JSXEmptyExpression',
-                'JSXSpreadChild',
-            ],
-            ignoreComments: false,
-        },
-    ],
+    indent: 'off',
 
     // This rule is aimed at enforcing or eliminating variable initializations during declaration.
     // https://eslint.org/docs/rules/init-declarations

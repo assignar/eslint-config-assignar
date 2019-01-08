@@ -9,7 +9,7 @@ const rules: Rules.Typescript = {
 
     // Enforces that types will not to be used.
     // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/ban-types.md
-    'typescript/ban-types': 'off',
+    'typescript/ban-types': 'error',
 
     // Enforce camelCase naming convention.
     // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/camelcase.md
@@ -33,7 +33,47 @@ const rules: Rules.Typescript = {
 
     // Enforce consistent indentation.
     // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/indent.md
-    'typescript/indent': 'off',
+    'typescript/indent': [
+        'error',
+        4,
+        {
+            SwitchCase: 1,
+            VariableDeclarator: 1,
+            outerIIFEBody: 1,
+            FunctionDeclaration: {
+                parameters: 1,
+                body: 1,
+            },
+            FunctionExpression: {
+                parameters: 1,
+                body: 1,
+            },
+            CallExpression: {
+                arguments: 1,
+            },
+            ArrayExpression: 1,
+            ObjectExpression: 1,
+            ImportDeclaration: 1,
+            flatTernaryExpressions: false,
+            // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+            ignoredNodes: [
+                'JSXElement',
+                'JSXElement > *',
+                'JSXAttribute',
+                'JSXIdentifier',
+                'JSXNamespacedName',
+                'JSXMemberExpression',
+                'JSXSpreadAttribute',
+                'JSXExpressionContainer',
+                'JSXOpeningElement',
+                'JSXClosingElement',
+                'JSXText',
+                'JSXEmptyExpression',
+                'JSXSpreadChild',
+            ],
+            ignoreComments: false,
+        },
+    ],
 
     // Prefixing interfaces with "I" can help telling them apart at a glance.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/interface-name-prefix.md
