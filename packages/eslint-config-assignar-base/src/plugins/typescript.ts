@@ -3,6 +3,18 @@ const rules: Rules.Typescript = {
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/adjacent-overload-signatures.md
     'typescript/adjacent-overload-signatures': 'error',
 
+    // Requires using either T[] or Array<T> for arrays.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/array-type.md
+    'typescript/array-type': 'error',
+
+    // Enforces that types will not to be used.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/ban-types.md
+    'typescript/ban-types': 'error',
+
+    // Enforce camelCase naming convention.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/camelcase.md
+    'typescript/camelcase': 'warn',
+
     // This rule enforces PascalCased names for classes and interfaces.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/class-name-casing.md
     'typescript/class-name-casing': 'error',
@@ -11,9 +23,57 @@ const rules: Rules.Typescript = {
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/explicit-function-return-type.md
     'typescript/explicit-function-return-type': 'off',
 
-    // Leaving off accessibility modifier and making everything public can make your interface hard to use by others
-    // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/explicit-member-accessibility.md
-    'typescript/explicit-member-accessibility': 'error',
+    // Leaving off accessibility modifier and making everything public can make your interface hard to use by others.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/explicit-member-accessibility.md
+    'typescript/explicit-member-accessibility': 'warn',
+
+    // Enforces naming of generic type variables.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/generic-type-naming.md
+    'typescript/generic-type-naming': 'error',
+
+    // Enforce consistent indentation.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/indent.md
+    'typescript/indent': [
+        'error',
+        4,
+        {
+            SwitchCase: 1,
+            VariableDeclarator: 1,
+            outerIIFEBody: 1,
+            FunctionDeclaration: {
+                parameters: 1,
+                body: 1,
+            },
+            FunctionExpression: {
+                parameters: 1,
+                body: 1,
+            },
+            CallExpression: {
+                arguments: 1,
+            },
+            ArrayExpression: 1,
+            ObjectExpression: 1,
+            ImportDeclaration: 1,
+            flatTernaryExpressions: false,
+            // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+            ignoredNodes: [
+                'JSXElement',
+                'JSXElement > *',
+                'JSXAttribute',
+                'JSXIdentifier',
+                'JSXNamespacedName',
+                'JSXMemberExpression',
+                'JSXSpreadAttribute',
+                'JSXExpressionContainer',
+                'JSXOpeningElement',
+                'JSXClosingElement',
+                'JSXText',
+                'JSXEmptyExpression',
+                'JSXSpreadChild',
+            ],
+            ignoreComments: false,
+        },
+    ],
 
     // Prefixing interfaces with "I" can help telling them apart at a glance.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/interface-name-prefix.md
@@ -27,9 +87,14 @@ const rules: Rules.Typescript = {
     'typescript/member-delimiter-style': [
         'error',
         {
-            delimiter: 'none',
-            requireLast: true,
-            ignoreSingleLine: true,
+            multiline: {
+                delimiter: 'none',
+                requireLast: true,
+            },
+            singleline: {
+                delimiter: 'comma',
+                requireLast: false,
+            },
         },
     ],
 
@@ -62,9 +127,17 @@ const rules: Rules.Typescript = {
     // warn discourage it - it can be specifically disabled in code if there's a valid use case
     'typescript/no-explicit-any': 'warn',
 
+    // Forbids the use of classes as namespaces.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/no-extraneous-class.md
+    'typescript/no-extraneous-class': 'warn',
+
     // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-inferrable-types.md
     'typescript/no-inferrable-types': 'off',
+
+    // Enforce valid definition of new and constructor.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/no-misused-new.md
+    'typescript/no-misused-new': 'error',
 
     // This rule aims to standardise the way modules are declared
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-namespace.md
@@ -81,10 +154,19 @@ const rules: Rules.Typescript = {
     // warn discourage it - it can be specifically disabled in code if there's a valid use case
     'typescript/no-non-null-assertion': 'warn',
 
+    // Forbids an object literal to appear in a type assertion expression.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/no-object-literal-type-assertion.md
+    'typescript/no-object-literal-type-assertion': 'error',
+
     // This rule disallows the use of parameter properties in constructors,
     // forcing the user to explicitly declare all properties in the class.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-parameter-properties.md
     'typescript/no-parameter-properties': 'error',
+
+    // Disallow aliasing this.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/no-this-alias.md
+    // warn discourage it - it can be specifically disabled in code if there's a valid use case
+    'typescript/no-this-alias': 'warn',
 
     // Does not allow the use of /// <reference /> comments.
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-triple-slash-reference.md
@@ -107,6 +189,10 @@ const rules: Rules.Typescript = {
     // Disallows the use of require statements except in import statements
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-var-requires.md
     'typescript/no-var-requires': 'off', // TODO - enable this, maybe?
+
+    // Prefer an interface declaration over a type literal (type T = { ... }).
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/prefer-interface.md
+    'typescript/prefer-interface': 'error',
 
     // Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules
     // https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/prefer-namespace-keyword.md

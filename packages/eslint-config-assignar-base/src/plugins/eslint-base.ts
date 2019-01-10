@@ -97,12 +97,7 @@ const rules: Rules.Eslint = {
     // Otherwise, a warning will be thrown. This rule only flags definitions and assignments but not function calls.
     // In case of ES6 import statements, this rule only targets the name of the variable that will be imported into the local module scope.
     // https://eslint.org/docs/rules/camelcase
-    camelcase: [
-        'error',
-        {
-            properties: 'never',
-        },
-    ],
+    camelcase: 'off',
 
     // This rule aims to enforce a consistent style of comments across your codebase.
     // https://eslint.org/docs/rules/capitalized-comments
@@ -335,47 +330,7 @@ const rules: Rules.Eslint = {
 
     // This rule enforces a consistent indentation style.
     // https://eslint.org/docs/rules/indent
-    indent: [
-        'error',
-        4,
-        {
-            SwitchCase: 1,
-            VariableDeclarator: 1,
-            outerIIFEBody: 1,
-            FunctionDeclaration: {
-                parameters: 1,
-                body: 1,
-            },
-            FunctionExpression: {
-                parameters: 1,
-                body: 1,
-            },
-            CallExpression: {
-                arguments: 1,
-            },
-            ArrayExpression: 1,
-            ObjectExpression: 1,
-            ImportDeclaration: 1,
-            flatTernaryExpressions: false,
-            // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
-            ignoredNodes: [
-                'JSXElement',
-                'JSXElement > *',
-                'JSXAttribute',
-                'JSXIdentifier',
-                'JSXNamespacedName',
-                'JSXMemberExpression',
-                'JSXSpreadAttribute',
-                'JSXExpressionContainer',
-                'JSXOpeningElement',
-                'JSXClosingElement',
-                'JSXText',
-                'JSXEmptyExpression',
-                'JSXSpreadChild',
-            ],
-            ignoreComments: false,
-        },
-    ],
+    indent: 'off',
 
     // This rule is aimed at enforcing or eliminating variable initializations during declaration.
     // https://eslint.org/docs/rules/init-declarations

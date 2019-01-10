@@ -26,7 +26,7 @@ const typesFile = [
     'declare namespace Rules {',
     `${indent}type RuleString = 'off' | 'warn' | 'error'`,
     `${indent}interface RuleArray extends Array<any> {`,
-    `${indent}${indent}0 : RuleString`,
+    `${indent}${indent}0: RuleString`,
     `${indent}}`,
     `${indent}export type RuleType = RuleString | RuleArray`,
     ...Object.keys(rulesPerPlugin).map((k) => {
@@ -35,7 +35,7 @@ const typesFile = [
 
         return [
             `export interface ${interfacePascal} {`,
-            ...rulesPerPlugin[k].map(rule => `${indent} '${rule}' : RuleType`),
+            ...rulesPerPlugin[k].map(rule => `${indent} '${rule}': RuleType`),
             '}',
         ].map(s => `${indent}${s}`).join('\n')
     }),

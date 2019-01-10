@@ -47,7 +47,7 @@ module.exports = {
         jest.name,
         typescript.name,
     ],
-    parser: 'typescript-eslint-parser',
+    parser: 'eslint-plugin-typescript/parser',
     parserOptions: {
         ecmaVersion: 2018,
         ecmaFeatures: {
