@@ -22,6 +22,10 @@ const rules: Rules.Jest = {
         },
     ],
 
+    // Don't use alias methods.
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-alias-methods.md
+    'jest/no-alias-methods': 'error',
+
     // This rule raises a warning about 'skip' tests.
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-disabled-tests.md
     'jest/no-disabled-tests': 'warn',
@@ -50,6 +54,10 @@ const rules: Rules.Jest = {
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-large-snapshots.md
     'jest/no-large-snapshots': 'off',
 
+    // Avoid using a callback in asynchronous tests
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
+    'jest/no-test-callback': 'error',
+
     // Use .only and .skip over f and x
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-prefixes.md
     'jest/no-test-prefixes': 'error',
@@ -71,6 +79,10 @@ const rules: Rules.Jest = {
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-strict-equal.md
     'jest/prefer-strict-equal': 'off',
 
+    // Suggest using toContain()
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-contain.md
+    'jest/prefer-to-contain': 'error',
+
     // Suggest using toBeNull()
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-be-null.md
     'jest/prefer-to-be-null': 'error',
@@ -82,6 +94,10 @@ const rules: Rules.Jest = {
     // Suggest using toHaveLength()
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-have-length.md
     'jest/prefer-to-have-length': 'error',
+
+    // Require a message for toThrow()
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-tothrow-message.md
+    'jest/require-tothrow-message': 'error',
 
     // Enforce valid describe() callback
     // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-describe.md

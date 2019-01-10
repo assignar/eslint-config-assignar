@@ -97,12 +97,7 @@ const rules: Rules.Eslint = {
     // Otherwise, a warning will be thrown. This rule only flags definitions and assignments but not function calls.
     // In case of ES6 import statements, this rule only targets the name of the variable that will be imported into the local module scope.
     // https://eslint.org/docs/rules/camelcase
-    camelcase: [
-        'error',
-        {
-            properties: 'never',
-        },
-    ],
+    camelcase: 'off',
 
     // This rule aims to enforce a consistent style of comments across your codebase.
     // https://eslint.org/docs/rules/capitalized-comments
@@ -335,47 +330,7 @@ const rules: Rules.Eslint = {
 
     // This rule enforces a consistent indentation style.
     // https://eslint.org/docs/rules/indent
-    indent: [
-        'error',
-        4,
-        {
-            SwitchCase: 1,
-            VariableDeclarator: 1,
-            outerIIFEBody: 1,
-            FunctionDeclaration: {
-                parameters: 1,
-                body: 1,
-            },
-            FunctionExpression: {
-                parameters: 1,
-                body: 1,
-            },
-            CallExpression: {
-                arguments: 1,
-            },
-            ArrayExpression: 1,
-            ObjectExpression: 1,
-            ImportDeclaration: 1,
-            flatTernaryExpressions: false,
-            // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
-            ignoredNodes: [
-                'JSXElement',
-                'JSXElement > *',
-                'JSXAttribute',
-                'JSXIdentifier',
-                'JSXNamespacedName',
-                'JSXMemberExpression',
-                'JSXSpreadAttribute',
-                'JSXExpressionContainer',
-                'JSXOpeningElement',
-                'JSXClosingElement',
-                'JSXText',
-                'JSXEmptyExpression',
-                'JSXSpreadChild',
-            ],
-            ignoreComments: false,
-        },
-    ],
+    indent: 'off',
 
     // This rule is aimed at enforcing or eliminating variable initializations during declaration.
     // https://eslint.org/docs/rules/init-declarations
@@ -572,11 +527,6 @@ const rules: Rules.Eslint = {
     // This rule aims to prevent access to uninitialized lexical bindings as well as accessing hoisted functions across case clauses
     // https://eslint.org/docs/rules/no-case-declarations
     'no-case-declarations': 'error',
-
-    // This rule is aimed at preventing unexpected behavior in your program that may arise from a bug in IE 8 and
-    // earlier, in which the catch clause parameter can leak into outer scopes.
-    // https://eslint.org/docs/rules/no-catch-shadow
-    'no-catch-shadow': 'off',
 
     // disallow modifying variables of class declarations
     // https://eslint.org/docs/rules/no-class-assign
@@ -1573,8 +1523,7 @@ const rules: Rules.Eslint = {
 
     // require spaces around operators
     // https://eslint.org/docs/rules/space-infix-ops
-    // TODO[BUG] - enable this when this is resolved - https://github.com/eslint/typescript-eslint-parser/issues/486
-    'space-infix-ops': 'off',
+    'space-infix-ops': 'error',
 
     // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops

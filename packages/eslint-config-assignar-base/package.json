@@ -6,14 +6,13 @@
     "author": "Brad Zacher <brad.zacher@gmail.com>",
     "main": "./dist/index.js",
     "dependencies": {
-        "eslint": "^5.4.0",
+        "eslint": "^5.8.0",
         "eslint-plugin-dependencies": "^2.4.0",
         "eslint-plugin-eslint-comments": "^3.0.1",
         "eslint-plugin-import": "^2.14.0",
-        "eslint-plugin-jest": "^21.21.0",
-        "eslint-plugin-typescript": "^0.12.0",
-        "eslint-restricted-globals": "^0.1.1",
-        "typescript-eslint-parser": "^18.0.0"
+        "eslint-plugin-jest": "^21.26.2",
+        "eslint-plugin-typescript": "^1.0.0-rc.2",
+        "eslint-restricted-globals": "^0.1.1"
     },
     "peerDependencies": {
         "typescript": "*"
